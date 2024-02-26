@@ -1,3 +1,21 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+/* Add this CSS to your global stylesheet or inline within your component */
+.fade-enter {
+    opacity: 0;
+    transform: scale(0.95); /* For a slight pop effect */
+  }
+  .fade-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 500ms, transform 500ms;
+  }
+  .fade-exit {
+    opacity: 1;
+  }
+  .fade-exit-active {
+    opacity: 0;
+    transition: opacity 500ms;
+  }
+  

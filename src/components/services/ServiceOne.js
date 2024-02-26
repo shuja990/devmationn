@@ -38,7 +38,7 @@ const ServiceOne = ({ bgDark }) => {
               />
             )}
             <div className="feature-grid">
-              <div
+              {/* <div
                 className={`shadow-sm highlight-card rounded-custom p-5 ${
                   bgDark
                     ? 'bg-custom-light promo-border-hover border border-2 border-light text-white'
@@ -113,7 +113,7 @@ const ServiceOne = ({ bgDark }) => {
                     </li>
                   </ul>
                 </div>
-                <Link href="/service-single">
+                <Link href="/single-service">
                   <a className="link-with-icon text-decoration-none mt-3">
                     View Details{' '}
                     <i className="far mb-1">
@@ -121,7 +121,7 @@ const ServiceOne = ({ bgDark }) => {
                     </i>
                   </a>
                 </Link>
-              </div>
+              </div> */}
               <div
                 className={`feature-card shadow-sm rounded-custom p-5 ${
                   bgDark
@@ -141,7 +141,7 @@ const ServiceOne = ({ bgDark }) => {
                     economically imperatives.
                   </p>
                 </div>
-                <Link href="/service-single">
+                <Link href="/single-service">
                   <a className="link-with-icon text-decoration-none mt-3">
                     View Details{' '}
                     <i className="far mb-1">
@@ -169,7 +169,7 @@ const ServiceOne = ({ bgDark }) => {
                     benefits.
                   </p>
                 </div>
-                <Link href="/service-single">
+                <Link href="/single-service">
                   <a className="link-with-icon text-decoration-none mt-3">
                     View Details{' '}
                     <i className="far mb-1">
@@ -197,7 +197,7 @@ const ServiceOne = ({ bgDark }) => {
                     driven action.
                   </p>
                 </div>
-                <Link href="/service-single">
+                <Link href="/single-service">
                   <a className="link-with-icon text-decoration-none mt-3">
                     View Details{' '}
                     <i className="far mb-1">
@@ -225,7 +225,147 @@ const ServiceOne = ({ bgDark }) => {
                     relationships.
                   </p>
                 </div>
-                <Link href="/service-single">
+                <Link href="/single-service">
+                  <a className="link-with-icon text-decoration-none mt-3">
+                    View Details{' '}
+                    <i className="far mb-1">
+                      <BsArrowRight />
+                    </i>
+                  </a>
+                </Link>
+              </div>
+              <div
+                className={`feature-card shadow-sm rounded-custom p-5 ${
+                  bgDark
+                    ? 'bg-custom-light promo-border-hover border border-2 border-light text-white'
+                    : 'bg-white'
+                }`}
+              >
+                <div className="icon-box d-inline-block rounded-circle bg-warning-soft mb-32">
+                  <span className="fal">
+                    <HiOutlineCog className="h3 text-warning" />
+                  </span>
+                </div>
+                <div className="feature-content">
+                  <h3 className="h5">Easy Customization</h3>
+                  <p className="mb-0">
+                    Dynamically develop ubiquitous opportunities whereas
+                    relationships.
+                  </p>
+                </div>
+                <Link href="/single-service">
+                  <a className="link-with-icon text-decoration-none mt-3">
+                    View Details{' '}
+                    <i className="far mb-1">
+                      <BsArrowRight />
+                    </i>
+                  </a>
+                </Link>
+              </div>
+              <div
+                className={`feature-card shadow-sm rounded-custom p-5 ${
+                  bgDark
+                    ? 'bg-custom-light promo-border-hover border border-2 border-light text-white'
+                    : 'bg-white'
+                }`}
+              >
+                <div className="icon-box d-inline-block rounded-circle bg-warning-soft mb-32">
+                  <span className="fal">
+                    <HiOutlineCog className="h3 text-warning" />
+                  </span>
+                </div>
+                <div className="feature-content">
+                  <h3 className="h5">Easy Customization</h3>
+                  <p className="mb-0">
+                    Dynamically develop ubiquitous opportunities whereas
+                    relationships.
+                  </p>
+                </div>
+                <Link href="/single-service">
+                  <a className="link-with-icon text-decoration-none mt-3">
+                    View Details{' '}
+                    <i className="far mb-1">
+                      <BsArrowRight />
+                    </i>
+                  </a>
+                </Link>
+              </div>
+              <div
+                className={`feature-card shadow-sm rounded-custom p-5 ${
+                  bgDark
+                    ? 'bg-custom-light promo-border-hover border border-2 border-light text-white'
+                    : 'bg-white'
+                }`}
+              >
+                <div className="icon-box d-inline-block rounded-circle bg-warning-soft mb-32">
+                  <span className="fal">
+                    <HiOutlineCog className="h3 text-warning" />
+                  </span>
+                </div>
+                <div className="feature-content">
+                  <h3 className="h5">Easy Customization</h3>
+                  <p className="mb-0">
+                    Dynamically develop ubiquitous opportunities whereas
+                    relationships.
+                  </p>
+                </div>
+                <Link href="/single-service">
+                  <a className="link-with-icon text-decoration-none mt-3">
+                    View Details{' '}
+                    <i className="far mb-1">
+                      <BsArrowRight />
+                    </i>
+                  </a>
+                </Link>
+              </div>
+              <div
+                className={`feature-card shadow-sm rounded-custom p-5 ${
+                  bgDark
+                    ? 'bg-custom-light promo-border-hover border border-2 border-light text-white'
+                    : 'bg-white'
+                }`}
+              >
+                <div className="icon-box d-inline-block rounded-circle bg-warning-soft mb-32">
+                  <span className="fal">
+                    <HiOutlineCog className="h3 text-warning" />
+                  </span>
+                </div>
+                <div className="feature-content">
+                  <h3 className="h5">Easy Customization</h3>
+                  <p className="mb-0">
+                    Dynamically develop ubiquitous opportunities whereas
+                    relationships.
+                  </p>
+                </div>
+                <Link href="/single-service">
+                  <a className="link-with-icon text-decoration-none mt-3">
+                    View Details{' '}
+                    <i className="far mb-1">
+                      <BsArrowRight />
+                    </i>
+                  </a>
+                </Link>
+              </div>
+              <div
+                className={`feature-card shadow-sm rounded-custom p-5 ${
+                  bgDark
+                    ? 'bg-custom-light promo-border-hover border border-2 border-light text-white'
+                    : 'bg-white'
+                }`}
+              >
+                <div className="icon-box d-inline-block rounded-circle bg-warning-soft mb-32">
+                  <span className="fal">
+                    <HiOutlineCog className="h3 text-warning" />
+                  </span>
+                </div>
+                <div className="feature-content">
+                  <h3 className="h5">Easy Customization</h3>
+                  <p className="mb-0">
+                    Dynamically develop ubiquitous opportunities whereas
+                    relationships.
+                  </p>
+                </div>
+                <Link href="/single-service">
                   <a className="link-with-icon text-decoration-none mt-3">
                     View Details{' '}
                     <i className="far mb-1">

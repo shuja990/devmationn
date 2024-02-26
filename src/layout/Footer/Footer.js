@@ -27,9 +27,9 @@ const Footer = ({ footerLight, style, footerGradient }) => {
                   <div className="footer-single-col mb-4">
                     {footerLight ? (
                       <Image
-                        width={113}
-                        height={36}
-                        src="/logo-icon-textArtboard-1.png"
+                        width={213}
+                        height={46}
+                        src="/logo.png"
                         alt="logo"
                         className="img-fluid logo-white"
                       // style={{width:"150"}}

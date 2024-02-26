@@ -2,6 +2,7 @@
 import React from 'react';
 import { FaRegCheckCircle } from 'react-icons/fa';
 import HeroTitle from '../common/HeroTitle';
+import Link from 'next/link';
 
 const HeroSectionFourth = ({ bgDark }) => {
   return (
@@ -23,28 +24,19 @@ const HeroSectionFourth = ({ bgDark }) => {
                 desc="Proactively coordinate quality quality vectors vis-a-vis
                   supply chains client-centric web services."
               />
-              <div className="hero-subscribe-form-wrap pt-4 position-relative m-auto m-xl-0 d-none d-md-block d-lg-block d-xl-block">
-                <form
-                  id="subscribe-form"
-                  name="email-form"
-                  className="hero-subscribe-form d-block d-lg-flex d-md-flex"
+              <div className="hero-subscribe-form-wrap pt-2 position-relative m-auto m-xl-0 d-none d-md-block d-lg-block d-xl-block">
+                <div
+                  className="action-btns pt-2"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
                 >
-                  <input
-                    type="email"
-                    className="form-control me-2"
-                    name="Email"
-                    data-name="Email"
-                    placeholder="Enter Your Email Address"
-                    id="email-address"
-                    required=""
-                  />
-                  <input
-                    type="button"
-                    value="Subscribe"
-                    data-wait="Please wait..."
-                    className="btn btn-primary mt-3 mt-lg-0 mt-md-0"
-                  />
-                </form>
+                  <Link href="/request-demo">
+                    <a className="btn btn-primary me-3"> Start a Free Trial</a>
+                  </Link>
+                  <Link href="/contact-us">
+                    <a className="btn btn-outline-primary">Talk to Sales</a>
+                  </Link>
+                </div>
                 <ul className="nav subscribe-feature-list mt-3">
                   <li className="nav-item">
                     <span className="ms-0">

@@ -5,7 +5,7 @@ import { BsArrowRight } from 'react-icons/bs';
 
 const ReviewOne = () => {
   return (
-    <section className="customer-review pb-120 bg-dark">
+    <section className="customer-review pt-120 pb-120 bg-dark">
       <div className="container">
         <div className="row">
           <div className="section-heading text-center" data-aos="fade-up">

@@ -10,12 +10,14 @@ import IntegrationOne from '@components/integration/IntegrationOne';
 import TestimonialOne from '@components/testimonial/TestimonialOne';
 import WorkProcessTwo from '@components/workprocess/WorkProcessTwo';
 import HeroSectionThree from '@components/hero-section/HeroSectionThree';
+import HeroSectionFourth from '@components/hero-section/HeroSectionFourth';
 
 const SassCompanyTwoHome = () => {
   return (
     <Layout>
       <Navbar />
-      <HeroSectionThree />
+      {/* <HeroSectionThree /> */}
+      <HeroSectionFourth />
       <ReviewOne />
       <ServiceOne />
       <WorkProcessTwo />
