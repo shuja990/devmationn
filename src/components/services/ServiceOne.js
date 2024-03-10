@@ -10,6 +10,7 @@ import { SiSimpleanalytics } from 'react-icons/si';
 import { IoGitCompareOutline } from 'react-icons/io5';
 import { FaCheckCircle } from 'react-icons/fa';
 import SectionTitle from '../common/SectionTitle';
+import Image from 'next/image';
 
 const ServiceOne = ({ bgDark }) => {
   return (
@@ -123,23 +124,23 @@ const ServiceOne = ({ bgDark }) => {
                 </Link>
               </div> */}
               <div
-                className={`feature-card shadow-sm rounded-custom p-5 ${
-                  bgDark
-                    ? 'bg-custom-light promo-border-hover border border-2 border-light text-white'
-                    : 'bg-white'
-                }`}
+                className={`feature-card shadow-sm rounded-custom p-5 ${bgDark
+                  ? 'bg-custom-light promo-border-hover border border-2 border-light text-white'
+                  : 'bg-white'
+                  }`}
               >
                 <div className="icon-box d-inline-block rounded-circle bg-success-soft mb-32">
                   <span className="fal">
-                    <HiOutlineDocumentReport className="h3 text-success" />
+                    <Image
+                      className="h3 text-success"
+                      src="/icons-web/app-development.png"
+                      alt="BTC"
+                      width={55} height={55}
+                    />
                   </span>
                 </div>
                 <div className="feature-content">
-                  <h3 className="h5">Automated Reports</h3>
-                  <p className="mb-0">
-                    Synergistically pursue accurate initiatives without
-                    economically imperatives.
-                  </p>
+                  <h3 className="h5">Web App Development</h3>
                 </div>
                 <Link href="/single-service">
                   <a className="link-with-icon text-decoration-none mt-3">
@@ -151,23 +152,22 @@ const ServiceOne = ({ bgDark }) => {
                 </Link>
               </div>
               <div
-                className={`feature-card shadow-sm rounded-custom p-5 ${
-                  bgDark
-                    ? 'bg-custom-light promo-border-hover border border-2 border-light text-white'
-                    : 'bg-white'
-                }`}
+                className={`feature-card shadow-sm rounded-custom p-5 ${bgDark
+                  ? 'bg-custom-light promo-border-hover border border-2 border-light text-white'
+                  : 'bg-white'
+                  }`}
               >
                 <div className="icon-box d-inline-block rounded-circle bg-danger-soft mb-32">
                   <span className="fal">
-                    <HiOutlineUsers className="h3 text-danger" />
-                  </span>
+                    <Image
+                      className="h3 text-success"
+                      src="/icons-web/smartphone.png"
+                      alt="BTC"
+                      width={55} height={55}
+                    />                  </span>
                 </div>
                 <div className="feature-content">
-                  <h3 className="h5">User Journey Flow</h3>
-                  <p className="mb-0">
-                    Quickly productize prospective value before collaborative
-                    benefits.
-                  </p>
+                  <h3 className="h5">Mobile App Development</h3>
                 </div>
                 <Link href="/single-service">
                   <a className="link-with-icon text-decoration-none mt-3">
@@ -179,23 +179,23 @@ const ServiceOne = ({ bgDark }) => {
                 </Link>
               </div>
               <div
-                className={`feature-card shadow-sm rounded-custom p-5 ${
-                  bgDark
-                    ? 'bg-custom-light promo-border-hover border border-2 border-light text-white'
-                    : 'bg-white'
-                }`}
+                className={`feature-card shadow-sm rounded-custom p-5 ${bgDark
+                  ? 'bg-custom-light promo-border-hover border border-2 border-light text-white'
+                  : 'bg-white'
+                  }`}
               >
                 <div className="icon-box d-inline-block rounded-circle bg-dark-soft mb-32">
                   <span className="fal">
-                    <IoGitCompareOutline className="h3 text-dark" />
+                    <Image
+                      className="h3 text-success"
+                      src="/icons-web/shopify.png"
+                      alt="BTC"
+                      width={55} height={55}
+                    />
                   </span>
                 </div>
                 <div className="feature-content">
-                  <h3 className="h5">Compare A/B Testing</h3>
-                  <p className="mb-0">
-                    Credibly disintermediate functional processes for team
-                    driven action.
-                  </p>
+                  <h3 className="h5">Shopify Development</h3>
                 </div>
                 <Link href="/single-service">
                   <a className="link-with-icon text-decoration-none mt-3">
@@ -207,23 +207,23 @@ const ServiceOne = ({ bgDark }) => {
                 </Link>
               </div>
               <div
-                className={`feature-card shadow-sm rounded-custom p-5 ${
-                  bgDark
-                    ? 'bg-custom-light promo-border-hover border border-2 border-light text-white'
-                    : 'bg-white'
-                }`}
+                className={`feature-card shadow-sm rounded-custom p-5 ${bgDark
+                  ? 'bg-custom-light promo-border-hover border border-2 border-light text-white'
+                  : 'bg-white'
+                  }`}
               >
                 <div className="icon-box d-inline-block rounded-circle bg-warning-soft mb-32">
                   <span className="fal">
-                    <HiOutlineCog className="h3 text-warning" />
+                    <Image
+                      className="h3 text-success"
+                      src="/icons-web/wordpress.png"
+                      alt="BTC"
+                      width={55} height={55}
+                    />
                   </span>
                 </div>
                 <div className="feature-content">
-                  <h3 className="h5">Easy Customization</h3>
-                  <p className="mb-0">
-                    Dynamically develop ubiquitous opportunities whereas
-                    relationships.
-                  </p>
+                  <h3 className="h5">Wordpress Development</h3>
                 </div>
                 <Link href="/single-service">
                   <a className="link-with-icon text-decoration-none mt-3">
@@ -235,23 +235,23 @@ const ServiceOne = ({ bgDark }) => {
                 </Link>
               </div>
               <div
-                className={`feature-card shadow-sm rounded-custom p-5 ${
-                  bgDark
-                    ? 'bg-custom-light promo-border-hover border border-2 border-light text-white'
-                    : 'bg-white'
-                }`}
+                className={`feature-card shadow-sm rounded-custom p-5 ${bgDark
+                  ? 'bg-custom-light promo-border-hover border border-2 border-light text-white'
+                  : 'bg-white'
+                  }`}
               >
                 <div className="icon-box d-inline-block rounded-circle bg-warning-soft mb-32">
                   <span className="fal">
-                    <HiOutlineCog className="h3 text-warning" />
+                    <Image
+                      className="h3 text-success"
+                      src="/icons-web/ux.png"
+                      alt="BTC"
+                      width={55} height={55}
+                    />
                   </span>
                 </div>
                 <div className="feature-content">
-                  <h3 className="h5">Easy Customization</h3>
-                  <p className="mb-0">
-                    Dynamically develop ubiquitous opportunities whereas
-                    relationships.
-                  </p>
+                  <h3 className="h5">UI/UX Development</h3>
                 </div>
                 <Link href="/single-service">
                   <a className="link-with-icon text-decoration-none mt-3">
@@ -263,23 +263,23 @@ const ServiceOne = ({ bgDark }) => {
                 </Link>
               </div>
               <div
-                className={`feature-card shadow-sm rounded-custom p-5 ${
-                  bgDark
-                    ? 'bg-custom-light promo-border-hover border border-2 border-light text-white'
-                    : 'bg-white'
-                }`}
+                className={`feature-card shadow-sm rounded-custom p-5 ${bgDark
+                  ? 'bg-custom-light promo-border-hover border border-2 border-light text-white'
+                  : 'bg-white'
+                  }`}
               >
                 <div className="icon-box d-inline-block rounded-circle bg-warning-soft mb-32">
                   <span className="fal">
-                    <HiOutlineCog className="h3 text-warning" />
+                    <Image
+                      className="h3 text-success"
+                      src="/icons-web/blockchain.png"
+                      alt="BTC"
+                      width={55} height={55}
+                    />
                   </span>
                 </div>
                 <div className="feature-content">
-                  <h3 className="h5">Easy Customization</h3>
-                  <p className="mb-0">
-                    Dynamically develop ubiquitous opportunities whereas
-                    relationships.
-                  </p>
+                  <h3 className="h5">Blockchain Development</h3>
                 </div>
                 <Link href="/single-service">
                   <a className="link-with-icon text-decoration-none mt-3">
@@ -291,23 +291,23 @@ const ServiceOne = ({ bgDark }) => {
                 </Link>
               </div>
               <div
-                className={`feature-card shadow-sm rounded-custom p-5 ${
-                  bgDark
-                    ? 'bg-custom-light promo-border-hover border border-2 border-light text-white'
-                    : 'bg-white'
-                }`}
+                className={`feature-card shadow-sm rounded-custom p-5 ${bgDark
+                  ? 'bg-custom-light promo-border-hover border border-2 border-light text-white'
+                  : 'bg-white'
+                  }`}
               >
                 <div className="icon-box d-inline-block rounded-circle bg-warning-soft mb-32">
                   <span className="fal">
-                    <HiOutlineCog className="h3 text-warning" />
+                    <Image
+                      className="h3 text-success"
+                      src="/icons-web/agile.png"
+                      alt="BTC"
+                      width={55} height={55}
+                    />
                   </span>
                 </div>
                 <div className="feature-content">
-                  <h3 className="h5">Easy Customization</h3>
-                  <p className="mb-0">
-                    Dynamically develop ubiquitous opportunities whereas
-                    relationships.
-                  </p>
+                  <h3 className="h5">Cloud and DevOps Solutions</h3>
                 </div>
                 <Link href="/single-service">
                   <a className="link-with-icon text-decoration-none mt-3">
@@ -319,11 +319,10 @@ const ServiceOne = ({ bgDark }) => {
                 </Link>
               </div>
               <div
-                className={`feature-card shadow-sm rounded-custom p-5 ${
-                  bgDark
-                    ? 'bg-custom-light promo-border-hover border border-2 border-light text-white'
-                    : 'bg-white'
-                }`}
+                className={`feature-card shadow-sm rounded-custom p-5 ${bgDark
+                  ? 'bg-custom-light promo-border-hover border border-2 border-light text-white'
+                  : 'bg-white'
+                  }`}
               >
                 <div className="icon-box d-inline-block rounded-circle bg-warning-soft mb-32">
                   <span className="fal">
@@ -331,11 +330,7 @@ const ServiceOne = ({ bgDark }) => {
                   </span>
                 </div>
                 <div className="feature-content">
-                  <h3 className="h5">Easy Customization</h3>
-                  <p className="mb-0">
-                    Dynamically develop ubiquitous opportunities whereas
-                    relationships.
-                  </p>
+                  <h3 className="h5">AI and Machine Learning Solutions</h3>
                 </div>
                 <Link href="/single-service">
                   <a className="link-with-icon text-decoration-none mt-3">
@@ -347,11 +342,10 @@ const ServiceOne = ({ bgDark }) => {
                 </Link>
               </div>
               <div
-                className={`feature-card shadow-sm rounded-custom p-5 ${
-                  bgDark
-                    ? 'bg-custom-light promo-border-hover border border-2 border-light text-white'
-                    : 'bg-white'
-                }`}
+                className={`feature-card shadow-sm rounded-custom p-5 ${bgDark
+                  ? 'bg-custom-light promo-border-hover border border-2 border-light text-white'
+                  : 'bg-white'
+                  }`}
               >
                 <div className="icon-box d-inline-block rounded-circle bg-warning-soft mb-32">
                   <span className="fal">
@@ -359,11 +353,7 @@ const ServiceOne = ({ bgDark }) => {
                   </span>
                 </div>
                 <div className="feature-content">
-                  <h3 className="h5">Easy Customization</h3>
-                  <p className="mb-0">
-                    Dynamically develop ubiquitous opportunities whereas
-                    relationships.
-                  </p>
+                  <h3 className="h5">MVP Development</h3>
                 </div>
                 <Link href="/single-service">
                   <a className="link-with-icon text-decoration-none mt-3">

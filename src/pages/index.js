@@ -23,7 +23,7 @@ const SassCompanyTwoHome = () => {
       <WorkProcessTwo />
       <TestimonialOne />
       <IntegrationOne />
-      <LatestBlog />
+      {/* <LatestBlog /> */}
       <SupportOne className />
       <Footer footerLight />
     </Layout>

@@ -21,6 +21,64 @@
   }
 }
 
+@keyframes textFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textFadeOutDown {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.text-enter {
+  animation: textFadeInUp 0.5s forwards;
+}
+
+.text-exit {
+  animation: textFadeOutDown 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+
+.fade-enter {
+  animation: fadeIn 0.5s forwards;
+}
+
+.fade-exit {
+  animation: fadeOut 0.5s forwards;
+}
+
 
 .integration-list-wrap a.integration-1 {
   left: -120px;
