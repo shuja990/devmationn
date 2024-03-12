@@ -62,7 +62,7 @@ const HeroSectionFourth = ({ bgDark }) => {
       spaceBetween={50} // Adjust space between slides
       slidesPerView={1} // Number of slides per view
       autoplay={{
-        delay: 7000, // Delay between transitions (in ms)
+        delay: 5000, // Delay between transitions (in ms)
         disableOnInteraction: false, // Continue autoplay on swiper interaction
       }}
       pagination={{ clickable: false, enabled: false }} // Disable pagination
@@ -79,7 +79,7 @@ const HeroSectionFourth = ({ bgDark }) => {
             }}
           >
             <div className="container">
-              <div className="row align-items-center justify-content-lg-between">
+            <div className="row align-items-center justify-content-lg-between width-95">
                 <div className="col-xl-5 col-lg-5">
                   <div
                     className="hero-content-wrap mt-5 text-center text-xl-start text-lg-start"
@@ -118,7 +118,7 @@ const HeroSectionFourth = ({ bgDark }) => {
                     </div>
                   </div>
                 </div>
-                <div className="col-xl-6 col-lg-6 mt-4 mt-xl-0">
+                <div className="col-xl-6 col-lg-6  col-xl-5 col-lg-5 mt-4 mt-xl-0">
                   <div
                     className="hero-img-wrap position-relative"
                     data-aos="fade-left"
