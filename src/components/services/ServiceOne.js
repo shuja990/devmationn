@@ -3,12 +3,7 @@ import Link from 'next/link';
 import { BsArrowRight } from 'react-icons/bs';
 import {
   HiOutlineCog,
-  HiOutlineDocumentReport,
-  HiOutlineUsers,
 } from 'react-icons/hi';
-import { SiSimpleanalytics } from 'react-icons/si';
-import { IoGitCompareOutline } from 'react-icons/io5';
-import { FaCheckCircle } from 'react-icons/fa';
 import SectionTitle from '../common/SectionTitle';
 import Image from 'next/image';
 
@@ -134,7 +129,7 @@ const ServiceOne = ({ bgDark }) => {
                     <Image
                       className="h3 text-success"
                       src="/icons-web/app-development.png"
-                      alt="BTC"
+                      alt="Web App Development"
                       width={55} height={55}
                     />
                   </span>
@@ -162,7 +157,7 @@ const ServiceOne = ({ bgDark }) => {
                     <Image
                       className="h3 text-success"
                       src="/icons-web/smartphone.png"
-                      alt="BTC"
+                      alt="Mobile App Development"
                       width={55} height={55}
                     />                  </span>
                 </div>
@@ -189,7 +184,7 @@ const ServiceOne = ({ bgDark }) => {
                     <Image
                       className="h3 text-success"
                       src="/icons-web/shopify.png"
-                      alt="BTC"
+                      alt="Shopify Development"
                       width={55} height={55}
                     />
                   </span>
@@ -217,7 +212,7 @@ const ServiceOne = ({ bgDark }) => {
                     <Image
                       className="h3 text-success"
                       src="/icons-web/wordpress.png"
-                      alt="BTC"
+                      alt="Wordpress Development"
                       width={55} height={55}
                     />
                   </span>
@@ -245,7 +240,7 @@ const ServiceOne = ({ bgDark }) => {
                     <Image
                       className="h3 text-success"
                       src="/icons-web/ux.png"
-                      alt="BTC"
+                      alt="UI/UX Development"
                       width={55} height={55}
                     />
                   </span>
@@ -273,7 +268,7 @@ const ServiceOne = ({ bgDark }) => {
                     <Image
                       className="h3 text-success"
                       src="/icons-web/blockchain.png"
-                      alt="BTC"
+                      alt="Blockchain Development"
                       width={55} height={55}
                     />
                   </span>
@@ -301,7 +296,7 @@ const ServiceOne = ({ bgDark }) => {
                     <Image
                       className="h3 text-success"
                       src="/icons-web/agile.png"
-                      alt="BTC"
+                      alt="Cloud and DevOps Solutions"
                       width={55} height={55}
                     />
                   </span>
@@ -326,7 +321,12 @@ const ServiceOne = ({ bgDark }) => {
               >
                 <div className="icon-box d-inline-block rounded-circle bg-warning-soft mb-32">
                   <span className="fal">
-                    <HiOutlineCog className="h3 text-warning" />
+                    <Image
+                      className="h3 text-success"
+                      src="/icons-web/artificial-intelligence.png"
+                      alt="Artificial intelligence"
+                      width={55} height={55}
+                    />
                   </span>
                 </div>
                 <div className="feature-content">
@@ -349,7 +349,12 @@ const ServiceOne = ({ bgDark }) => {
               >
                 <div className="icon-box d-inline-block rounded-circle bg-warning-soft mb-32">
                   <span className="fal">
-                    <HiOutlineCog className="h3 text-warning" />
+                    <Image
+                      className="h3 text-success"
+                      src="/icons-web/team.png"
+                      alt="MVP Development"
+                      width={55} height={55}
+                    />
                   </span>
                 </div>
                 <div className="feature-content">

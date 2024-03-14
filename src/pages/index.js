@@ -11,6 +11,7 @@ import TestimonialOne from '@components/testimonial/TestimonialOne';
 import WorkProcessTwo from '@components/workprocess/WorkProcessTwo';
 import HeroSectionThree from '@components/hero-section/HeroSectionThree';
 import HeroSectionFourth from '@components/hero-section/HeroSectionFourth';
+import ContactForm from '@components/contact-us/ContactForm';
 
 const SassCompanyTwoHome = () => {
   return (
@@ -25,6 +26,7 @@ const SassCompanyTwoHome = () => {
       <IntegrationOne />
       {/* <LatestBlog /> */}
       <SupportOne className />
+      <ContactForm />
       <Footer footerLight />
     </Layout>
   );

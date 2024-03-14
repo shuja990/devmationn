@@ -21,7 +21,7 @@ const HeroSectionFourth = ({ bgDark }) => {
     {
       title: 'Revolutionize your online presence with our state-of-the-art, all-inclusive web app solutions.',
       subTitle: "Maximize your online presence with our comprehensive Web Application Development Service. Using cutting-edge technology, we streamline your web needs to boost efficiency, productivity, and drive success. Let's embark on this journey to digital excellence together.",
-      image: "/home-carousel/webdevelopment.png",
+      image: "/home-carousel/web.png",
       cta: "Let's Build Together"
     },
     {
@@ -33,7 +33,7 @@ const HeroSectionFourth = ({ bgDark }) => {
     {
       title: 'Unlock digital potential with our cloud solutions, seamlessly driving brand success with intuitive interfaces.',
       subTitle: 'Optimize your digital sphere with our specialized cloud solutions. Effortlessly navigate the online landscape and amplify user satisfaction with intuitive interfaces meticulously tailored to propel your brand towards success',
-      image: "/home-carousel/cloud.jpg",
+      image: "/home-carousel/cloud.png",
       cta: "Let's Deploy together"
     },
     {
