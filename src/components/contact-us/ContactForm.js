@@ -1,7 +1,40 @@
 import React from 'react';
 import Image from 'next/image';
+import { useForm } from '@formspree/react';
+import toast, { Toaster } from 'react-hot-toast';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const ContactForm = ({ title, desc }) => {
+  const [state, handleSubmit] = useForm("meqynklp");
+  const recaptchaRef = React.createRef();
+
+  const successToast = () => {
+    toast.success('Your request has been submitted. We will contact you soon!', {
+      duration: 4000,
+      style: {
+        border: '1px solid #4CAF50',
+        padding: '16px',
+        color: '#4CAF50',
+        backgroundColor: 'white'
+      },
+      iconTheme: {
+        primary: '#4CAF50',
+        secondary: '#FFFAEE',
+      },
+      icon: '✅'
+    });
+  };
+
+  if (state.succeeded) {
+    successToast()
+  }
+
+  const onSubmitWithReCAPTCHA = async (e) => {
+    e.preventDefault();
+    const token = await recaptchaRef.current.executeAsync();
+    handleSubmit(e, { "g-recaptcha-response": token });
+  }
+
   return (
     <div>
       <section
@@ -21,7 +54,7 @@ const ContactForm = ({ title, desc }) => {
                   {desc ? desc : "Collaboratively promote client-focused convergence vis-a-vis customer directed alignments via standardized infrastructures."}
                 </p>
               </div>
-              <form action="#" className="register-form">
+              <form onSubmit={onSubmitWithReCAPTCHA} className="register-form">
                 <div className="row">
                   <div className="col-sm-6">
                     <label htmlFor="firstName" className="mb-1">
@@ -98,6 +131,11 @@ const ContactForm = ({ title, desc }) => {
                     </div>
                   </div>
                 </div>
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey="6LchJc0pAAAAAHj9zyud5dSfPiw3ZM5ODqPdibWK"
+                  size="invisible" // Use "invisible" for Invisible reCAPTCHA
+                />
                 <button type="submit" className="btn btn-primary mt-4">
                   Get in Touch
                 </button>
@@ -117,6 +155,7 @@ const ContactForm = ({ title, desc }) => {
           </div>
         </div>
       </section>
+      <Toaster />
     </div>
   );
 };
