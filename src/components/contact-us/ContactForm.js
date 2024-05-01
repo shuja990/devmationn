@@ -1,21 +1,19 @@
 import React from 'react';
 import Image from 'next/image';
 import { useForm } from '@formspree/react';
-import toast, { Toaster } from 'react-hot-toast';
-import ReCAPTCHA from 'react-google-recaptcha';
+import toast, { LoaderIcon, Toaster } from 'react-hot-toast';
 
 const ContactForm = ({ title, desc }) => {
   const [state, handleSubmit] = useForm("meqynklp");
-  const recaptchaRef = React.createRef();
 
   const successToast = () => {
     toast.success('Your request has been submitted. We will contact you soon!', {
       duration: 4000,
       style: {
-        border: '1px solid #4CAF50',
+        // border: '1px solid #4CAF50',
         padding: '16px',
-        color: '#4CAF50',
-        backgroundColor: 'white'
+        // color: '#4CAF50',
+        // backgroundColor: 'white'
       },
       iconTheme: {
         primary: '#4CAF50',
@@ -27,12 +25,6 @@ const ContactForm = ({ title, desc }) => {
 
   if (state.succeeded) {
     successToast()
-  }
-
-  const onSubmitWithReCAPTCHA = async (e) => {
-    e.preventDefault();
-    const token = await recaptchaRef.current.executeAsync();
-    handleSubmit(e, { "g-recaptcha-response": token });
   }
 
   return (
@@ -54,7 +46,7 @@ const ContactForm = ({ title, desc }) => {
                   {desc ? desc : "Collaboratively promote client-focused convergence vis-a-vis customer directed alignments via standardized infrastructures."}
                 </p>
               </div>
-              <form onSubmit={onSubmitWithReCAPTCHA} className="register-form">
+              <form onSubmit={handleSubmit} className="register-form">
                 <div className="row">
                   <div className="col-sm-6">
                     <label htmlFor="firstName" className="mb-1">
@@ -65,6 +57,7 @@ const ContactForm = ({ title, desc }) => {
                         type="text"
                         className="form-control"
                         id="firstName"
+                        name="firstName"
                         required
                         placeholder="First name"
                         aria-label="First name"
@@ -80,6 +73,7 @@ const ContactForm = ({ title, desc }) => {
                         type="text"
                         className="form-control"
                         id="lastName"
+                        name="lastName"
                         placeholder="Last name"
                         aria-label="Last name"
                       />
@@ -94,6 +88,7 @@ const ContactForm = ({ title, desc }) => {
                         type="text"
                         className="form-control"
                         id="phone"
+                        name="phone"
                         required
                         placeholder="Phone"
                         aria-label="Phone"
@@ -109,6 +104,7 @@ const ContactForm = ({ title, desc }) => {
                         type="email"
                         className="form-control"
                         id="email"
+                        name="email"
                         required
                         placeholder="Email"
                         aria-label="Email"
@@ -123,6 +119,7 @@ const ContactForm = ({ title, desc }) => {
                       <textarea
                         className="form-control"
                         id="yourMessage"
+                        name="yourMessage"
                         required
                         draggable={false}
                         placeholder="How can we help you?"
@@ -131,13 +128,9 @@ const ContactForm = ({ title, desc }) => {
                     </div>
                   </div>
                 </div>
-                <ReCAPTCHA
-                  ref={recaptchaRef}
-                  sitekey="6LchJc0pAAAAAHj9zyud5dSfPiw3ZM5ODqPdibWK"
-                  size="invisible" // Use "invisible" for Invisible reCAPTCHA
-                />
+                <div className="g-recaptcha" data-sitekey="6LchJc0pAAAAAHj9zyud5dSfPiw3ZM5ODqPdibWK"></div>
                 <button type="submit" className="btn btn-primary mt-4">
-                  Get in Touch
+                  {state.submitting ? <LoaderIcon /> : "Get in Touch"}
                 </button>
               </form>
             </div>
