@@ -8,7 +8,7 @@ import {
 
 const CareerPromo = () => {
   return (
-    <section className="career-promo ptb-120 bg-light">
+    <section className="career-promo ptb-120 bg-dark">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-6 col-md-12">
@@ -86,6 +86,7 @@ const CareerPromo = () => {
           </div>
         </div>
       </div>
+      <div id='get-started-with-us'></div>
     </section>
   );
 };

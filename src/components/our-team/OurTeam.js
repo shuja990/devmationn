@@ -1,7 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import { FaFacebookF, FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import { ourTeam } from '../../utils/data';
 
 const OurTeam = () => {
@@ -27,7 +25,7 @@ const OurTeam = () => {
               <div className="team-single-wrap mb-5">
                 <div className="team-img rounded-custom">
                   <Image width={306} height={306} src={team.image} alt="team" />
-                  <ul className="list-unstyled team-social-list d-flex flex-column mb-0">
+                  {/* <ul className="list-unstyled team-social-list d-flex flex-column mb-0">
                     <li className="list-inline-item">
                       <Link href="#!">
                         <a>
@@ -64,7 +62,7 @@ const OurTeam = () => {
                         </a>
                       </Link>
                     </li>
-                  </ul>
+                  </ul> */}
                 </div>
                 <div className="team-info mt-4 text-center">
                   <h5 className="h6 mb-1">{team.name} </h5>

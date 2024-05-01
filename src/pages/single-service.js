@@ -5,9 +5,10 @@ import Footer from '@layout/Footer/Footer';
 import Navbar from '@layout/Header/Navbar';
 import PageHeader from '@components/common/PageHeader';
 import SingleServicePromo from '@components/services/SingleServicePromo';
-import SingleServiceRegister from '@components/services/SingleServiceRegister';
 import SingleServiceFeature from '@components/services/SingleServiceFeature';
 import SingleServiceFeatureTwo from '@components/services/SingleServiceFeatureTwo';
+import OurOffice from '@components/our-office/OurOffice';
+import ContactForm from '@components/contact-us/ContactForm';
 
 
 
@@ -20,9 +21,12 @@ const SingleService = () => {
         desc="Seamlessly actualize client-based users after out-of-the-box value. Globally embrace strategic data through frictionless expertise."
       />
       <SingleServiceFeature />
+      <OurOffice />
       <SingleServiceFeatureTwo />
       <SingleServicePromo />
-      <SingleServiceRegister />
+      {/* <SingleServiceRegister /> */}
+      <ContactForm />
+
       <Footer footerLight />
     </Layout>
   );

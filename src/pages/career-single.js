@@ -5,8 +5,8 @@ import Footer from '@layout/Footer/Footer';
 import Navbar from '@layout/Header/Navbar';
 import JobDetails from '@components/career/JobDetails';
 import RelatedJob from '@components/career/RelatedJob';
-import SupportOne from '@components/support/SupportOne';
 import CareerSingleHeader from '@components/career/CareerSingleHeader';
+import ContactForm from '@components/contact-us/ContactForm';
 
 const CareerSingle = () => {
   return (
@@ -15,7 +15,7 @@ const CareerSingle = () => {
       <CareerSingleHeader />
       <JobDetails />
       <RelatedJob />
-      <SupportOne className />
+      <ContactForm />
       <Footer footerLight />
     </Layout>
   );

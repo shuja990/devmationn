@@ -73,6 +73,10 @@
   --bs-font-monospace: "Poppins", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--body-color);
   line-height: 1.75;
@@ -1410,7 +1414,6 @@ a.dropdown-link:hover i,
   transition: all 0.3s ease;
 }
 .promo-border-hover:hover {
-  background: transparent !important;
   border-color: var(--bs-primary) !important;
 }
 

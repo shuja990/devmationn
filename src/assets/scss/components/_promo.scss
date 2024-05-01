@@ -59,10 +59,10 @@
 }
 
 .promo-border-hover {
+  height: 400px;
   transition: all 0.3s ease;
 }
 .promo-border-hover:hover {
-  background: transparent !important;
   border-color: $primary !important;
 }
 

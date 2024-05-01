@@ -5,8 +5,8 @@ import Footer from '@layout/Footer/Footer';
 import Navbar from '@layout/Header/Navbar';
 import PageHeader from '@components/common/PageHeader';
 import ServiceOne from '@components/services/ServiceOne';
-import SupportOne from '@components/support/SupportOne';
 import TestimonialTwo from '@components/testimonial/TestimonialTwo';
+import ContactForm from '@components/contact-us/ContactForm';
 
 
 const services = () => {
@@ -17,10 +17,9 @@ const services = () => {
         title="We are Development Experts"
         desc="Seamlessly actualize client-based users after out-of-the-box value. Globally embrace strategic data through frictionless expertise."
       />
-
       <ServiceOne />
-      <TestimonialTwo />
-      <SupportOne className="true" />
+      <TestimonialTwo dark />
+      <ContactForm />
       <Footer footerLight />
     </Layout>
   );

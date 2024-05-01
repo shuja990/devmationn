@@ -1,17 +1,16 @@
 import React from 'react';
 
-const OurOffice = () => {
+const OurOffice = ({ title, desc }) => {
   return (
-    <section className="office-address-section ptb-120">
+    <section className="office-address-section ptb-100 bg-dark">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-6 col-md-12">
             <div className="section-heading text-center">
-              <h4 className="h5 text-primary">Our Office</h4>
-              <h2>Located Around the World</h2>
+              <h4 className="h5 text-white">Our Portfolio</h4>
+              <h2>{title}</h2>
               <p>
-                Dynamically technically sound technologies with parallel task
-                convergence quality vectors through excellent relationships.{' '}
+                {desc}
               </p>
             </div>
           </div>

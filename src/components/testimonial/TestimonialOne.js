@@ -121,6 +121,7 @@ const TestimonialOne = ({ darkBg }) => {
           </div>
         </div>
       </div>
+      <div id='get-started-with-us'></div>
     </section>
   );
 };

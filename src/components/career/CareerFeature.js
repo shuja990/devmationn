@@ -50,21 +50,9 @@ const CareerFeature = () => {
                     <span key={i + 1}>
                       <li className="list-inline-item">
                         <span className="far fa-lg me-1">
-                          <BiBuildingHouse className="mb-1" />
-                        </span>{' '}
-                        {list.media}
-                      </li>
-                      <li className="list-inline-item">
-                        <span className="far fa-lg me-1">
                           <BiCurrentLocation className="mb-1" />
                         </span>{' '}
                         {list.location}
-                      </li>
-                      <li className="list-inline-item">
-                        <span className="far fa-lg me-1">
-                          <BiWallet className="mb-1" />
-                        </span>{' '}
-                        {list.salary}
                       </li>
                     </span>
                   ))}

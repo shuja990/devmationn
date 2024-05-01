@@ -24,3 +24,11 @@
       width: 95%;
     }
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  textarea{
+    resize: none;
+  }

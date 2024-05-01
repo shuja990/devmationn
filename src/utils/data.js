@@ -244,58 +244,52 @@ const footerTemplate = [
 //navbar data
 const navHomeOne = [
   {
-    title: 'Web Development',
-    info: "It's for SaaS Software Company",
-    href: 'single-service',
+    title: 'Web App Development',
+    info: "Build custom web apps that grow your business. ",
+    href: 'web-app-development',
   },
   {
     title: 'Mobile Application Development',
-    info: ' Modern Sass agency',
-    href: 'single-service',
+    info: 'Create modern mobile apps that engage your users. ',
+    href: 'mobile-app-development',
   },
-  {
-    title: 'Blockchain Development',
-    info: 'Web Software Company',
-    href: 'single-service',
-  },
-
   {
     title: 'Wordpress Development',
-    info: ' App and Software Landing',
-    href: 'single-service',
+    info: 'Design high-converting landing pages for your software.',
+    href: 'wordpress-development',
   },
   {
-    title: 'Custom Web Development',
-    info: 'IT solutions and SaaS Application',
-    href: 'single-service',
+    title: 'AI and Machine Learning Solutions',
+    info: 'Unlock powerful AI to automate tasks and gain insights.',
+    href: 'ai-and-machine-learning-solutions',
   }
 ];
 
 const navHomeTwo = [
   {
-    title: 'DevOps Solutions',
-    info: 'IT Solution and Sass Application',
-    href: 'single-service',
-  },
-  {
-    title: 'Cloud Solutions',
-    info: 'Cyber Security Landing Page',
-    href: 'single-service',
+    title: 'Cloud and DevOps Solutions',
+    info: 'Simplify development & deployment for faster innovation.',
+    href: 'cloud-and-devops-solutions',
   },
   {
     title: 'Shopify Development',
-    info: 'Crypto Currency Landing Page',
-    href: 'single-service',
+    info: 'Build beautiful and functional Shopify stores that sell.',
+    href: 'shopify-development',
   },
   {
     title: 'UI/UX Design',
-    info: 'Crypto Server Landing Page',
-    href: 'single-service',
+    info: 'Craft user-friendly interfaces that delight your customers.',
+    href: 'ui-ux-design',
   },
-  {                                   
-    title: 'MVP Development',                                                                     
-    info: 'Payment Landing Page',
-    href: 'single-service',                                                                                                                                    
+  {
+    title: 'Blockchain Development',
+    info: 'Develop secure and transparent applications that build trust',
+    href: 'blockchain-development',
+  },
+  {
+    title: 'MVP Development',
+    info: 'Launch your minimum viable product quickly and test your idea.',
+    href: 'mvp-development',
   },
 ];
 

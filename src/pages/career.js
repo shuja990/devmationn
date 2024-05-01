@@ -3,9 +3,9 @@ import Layout from '@layout/Layout';
 import Footer from '@layout/Footer/Footer';
 import Navbar from '@layout/Header/Navbar';
 import PageHeader from '@components/common/PageHeader';
-import SupportOne from '@components/support/SupportOne';
 import CareerPromo from '@components/career/CareerPromo';
 import CareerFeature from '@components/career/CareerFeature';
+import ContactForm from '@components/contact-us/ContactForm';
 
 
 
@@ -19,10 +19,7 @@ const Career = () => {
       />
       <CareerFeature />
       <CareerPromo />
-      {/* <OpenJobs />
-      <CareerPromo />
-      <CtaTwo /> */}
-      <SupportOne className />
+      <ContactForm />
       <Footer footerLight />
     </Layout>
   );

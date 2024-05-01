@@ -120,6 +120,8 @@ const TestimonialTwo = ({ dark, bgWhite }) => {
             </div>
           </div>
         </div>
+        <div id='get-started-with-us'></div>
+
       </section>
     </>
   );

@@ -147,11 +147,6 @@ const Navbar = ({ navDark, classOption }) => {
                 </Link>
               </li>
               <li>
-                <Link href="blogs">
-                  <a className="nav-link">Blogs</a>
-                </Link>
-              </li>
-              <li>
                 <Link href="career">
                   <a className="nav-link">Careers</a>
                 </Link>
@@ -205,9 +200,9 @@ const Navbar = ({ navDark, classOption }) => {
           </div>
 
           <div className="action-btns text-end me-5 me-lg-0 d-none d-md-block d-lg-block">
-            <Link href="request-demo">
-              <a className="btn btn-primary">Get Started</a>
-            </Link>
+            {/* <Link href="request-demo"> */}
+              <a href="#get-started-with-us" className="btn btn-primary">Get Started</a>
+            {/* </Link> */}
           </div>
 
           <div
@@ -219,9 +214,9 @@ const Navbar = ({ navDark, classOption }) => {
               <Link href="/">
                 <a className="d-flex align-items-center mb-md-0 text-decoration-none">
                   <Image
-                    width={121}
+                    width={213}
                     height={36}
-                    src="/logo-color.png"
+                    src="logo.png"
                     alt="logo"
                     className="img-fluid ps-2"
                   />
@@ -229,7 +224,7 @@ const Navbar = ({ navDark, classOption }) => {
               </Link>
               <button
                 type="button"
-                className="close-btn text-danger"
+                className="close-btn text-danger d-flex align-items-center justify-content-center"
                 data-bs-dismiss="offcanvas"
                 aria-label="Close"
               >

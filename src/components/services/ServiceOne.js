@@ -1,9 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { BsArrowRight } from 'react-icons/bs';
-import {
-  HiOutlineCog,
-} from 'react-icons/hi';
 import SectionTitle from '../common/SectionTitle';
 import Image from 'next/image';
 
@@ -137,7 +134,7 @@ const ServiceOne = ({ bgDark }) => {
                 <div className="feature-content">
                   <h3 className="h5">Web App Development</h3>
                 </div>
-                <Link href="/single-service">
+                <Link href="/web-app-development">
                   <a className="link-with-icon text-decoration-none mt-3">
                     View Details{' '}
                     <i className="far mb-1">
@@ -164,7 +161,7 @@ const ServiceOne = ({ bgDark }) => {
                 <div className="feature-content">
                   <h3 className="h5">Mobile App Development</h3>
                 </div>
-                <Link href="/single-service">
+                <Link href="/mobile-app-development">
                   <a className="link-with-icon text-decoration-none mt-3">
                     View Details{' '}
                     <i className="far mb-1">
@@ -192,7 +189,7 @@ const ServiceOne = ({ bgDark }) => {
                 <div className="feature-content">
                   <h3 className="h5">Shopify Development</h3>
                 </div>
-                <Link href="/single-service">
+                <Link href="/shopify-development">
                   <a className="link-with-icon text-decoration-none mt-3">
                     View Details{' '}
                     <i className="far mb-1">
@@ -220,7 +217,7 @@ const ServiceOne = ({ bgDark }) => {
                 <div className="feature-content">
                   <h3 className="h5">Wordpress Development</h3>
                 </div>
-                <Link href="/single-service">
+                <Link href="/wordpress-development">
                   <a className="link-with-icon text-decoration-none mt-3">
                     View Details{' '}
                     <i className="far mb-1">
@@ -248,7 +245,7 @@ const ServiceOne = ({ bgDark }) => {
                 <div className="feature-content">
                   <h3 className="h5">UI/UX Development</h3>
                 </div>
-                <Link href="/single-service">
+                <Link href="/ui-ux-design">
                   <a className="link-with-icon text-decoration-none mt-3">
                     View Details{' '}
                     <i className="far mb-1">
@@ -276,7 +273,7 @@ const ServiceOne = ({ bgDark }) => {
                 <div className="feature-content">
                   <h3 className="h5">Blockchain Development</h3>
                 </div>
-                <Link href="/single-service">
+                <Link href="/blockchain-development">
                   <a className="link-with-icon text-decoration-none mt-3">
                     View Details{' '}
                     <i className="far mb-1">
@@ -304,7 +301,7 @@ const ServiceOne = ({ bgDark }) => {
                 <div className="feature-content">
                   <h3 className="h5">Cloud and DevOps Solutions</h3>
                 </div>
-                <Link href="/single-service">
+                <Link href="/cloud-and-devops-solutions">
                   <a className="link-with-icon text-decoration-none mt-3">
                     View Details{' '}
                     <i className="far mb-1">
@@ -332,7 +329,7 @@ const ServiceOne = ({ bgDark }) => {
                 <div className="feature-content">
                   <h3 className="h5">AI and Machine Learning Solutions</h3>
                 </div>
-                <Link href="/single-service">
+                <Link href="/ai-and-machine-learning-solutions">
                   <a className="link-with-icon text-decoration-none mt-3">
                     View Details{' '}
                     <i className="far mb-1">
@@ -360,7 +357,7 @@ const ServiceOne = ({ bgDark }) => {
                 <div className="feature-content">
                   <h3 className="h5">MVP Development</h3>
                 </div>
-                <Link href="/single-service">
+                <Link href="/mvp-development">
                   <a className="link-with-icon text-decoration-none mt-3">
                     View Details{' '}
                     <i className="far mb-1">

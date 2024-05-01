@@ -2,12 +2,11 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { integrationOneLeft, integrationOneRight } from '../../utils/data';
 
 const IntegrationOne = () => {
   const data = [
     {
-      title:'Mobile App Development',
+      title: 'Mobile App Development',
       left: [
         {
           id: 1,
@@ -37,7 +36,7 @@ const IntegrationOne = () => {
       ]
     },
     {
-      title:'Web Development',
+      title: 'Web Development',
       left: [
         {
           id: 1,
@@ -104,7 +103,7 @@ const IntegrationOne = () => {
       ]
     },
     {
-      title:'Blockchain Development',
+      title: 'Blockchain Development',
       left: [
         {
           id: 1,
@@ -140,7 +139,7 @@ const IntegrationOne = () => {
       ]
     },
     {
-      title:'Database Management',
+      title: 'Database Management',
       left: [
         {
           id: 1,
@@ -176,7 +175,7 @@ const IntegrationOne = () => {
       ]
     },
     {
-      title:'Quality Assurance',
+      title: 'Quality Assurance',
       left: [
         {
           id: 1,
@@ -203,7 +202,7 @@ const IntegrationOne = () => {
       ]
     },
     {
-      title:'UI/UX Design',
+      title: 'UI/UX Design',
       left: [
         {
           id: 1,
@@ -259,12 +258,12 @@ const IntegrationOne = () => {
           <div className="col-lg-3">
             <div className={`integration-list-wrap ${animate ? 'fade-enter' : 'fade-exit'}`}>
               {currentData.left.map((integration, i) => (
-                <Link href="/integration-single" key={i + 1} >
+                <div key={i}>
                   <a
                     className={integration.className}
                     data-bs-toggle="tooltip"
                     data-bs-placement="top"
-                    title="Your Brand Name"
+                    title={integration.title}
                   >
                     <Image
                       width={40}
@@ -274,17 +273,14 @@ const IntegrationOne = () => {
                       className="img-fluid rounded-circle"
                     />
                   </a>
-                </Link>
+                </div>
               ))}
             </div>
           </div>
           <div className={`col-lg-6 col-12 ${animate ? 'text-enter' : 'text-exit'}`}>
             <div className="section-heading text-center my-5 my-lg-0 my-xl-0">
-              <h4 className="text-primary h5">Integration</h4>
+              <h4 className="text-primary h5">Technologies</h4>
               <h2>{currentData.title}</h2>
-              <Link href="/integrations">
-                <a className="mt-4 btn btn-primary">View all Integration</a>
-              </Link>
             </div>
           </div>
           <div className="col-lg-3">
