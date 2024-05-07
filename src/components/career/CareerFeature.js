@@ -22,10 +22,7 @@ const CareerFeature = () => {
           </div>
           <div className="col-lg-7 col-md-12">
             <p>
-              Phosfluorescently disintermediate revolutionary paradigms before
-              enabled interfaces. Dynamically transition skills vis-a-vis
-              virtual customer service via impactful partnerships with
-              technically sound paradigms with cutting-edge initiatives.{' '}
+              At DevMations, we're at the forefront of transforming industry standards by integrating innovative technologies with effective strategies. We are constantly seeking to bridge the gap between theoretical paradigms and practical implementations, enhancing our services through dynamic teamwork and strategic partnerships. Join us to be part of a cutting-edge team committed to excellence and innovation in solving real-world challenges.
             </p>
           </div>
         </div>

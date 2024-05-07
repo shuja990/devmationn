@@ -29,9 +29,9 @@ const JobOverview = () => {
             </div>
           </li>
         </ul>
-        <Link href="/contact-us">
-          <a className="btn btn-primary d-block mt-5">Apply now</a>
-        </Link>
+        {/* <Link href="/contact-us"> */}
+          <a className="btn btn-primary d-block mt-5" href='https://w0fznvc7i45.typeform.com/to/pkrYlDHV' rel="noopener noreferrer" target='_blank'>Apply now</a>
+        {/* </Link> */}
       </div>
     </>
   );
