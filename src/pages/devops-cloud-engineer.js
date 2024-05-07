@@ -39,21 +39,21 @@ const data = {
         "Cloud monitoring and logging tools (e.g., CloudWatch, Azure Monitor)",
         "Infrastructure automation best practices"
     ]
-      
-  
+}
+
 
 
 const CareerSingle = () => {
-        return (
-            <Layout title={data.title}>
-                <Navbar classOption="navbar-light" />
-                <CareerSingleHeader title={data.title} />
-                <JobDetails desc={data.desc} skills={data.skills} responsibilities={data.responsibilities} requirements={data.requirements} />
-                <RelatedJob />
-                <ContactForm />
-                <Footer footerLight />
-            </Layout>
-        );
-    };
+    return (
+        <Layout title={data.title}>
+            <Navbar classOption="navbar-light" />
+            <CareerSingleHeader title={data.title} />
+            <JobDetails desc={data.desc} skills={data.skills} responsibilities={data.responsibilities} requirements={data.requirements} />
+            <RelatedJob />
+            <ContactForm />
+            <Footer footerLight />
+        </Layout>
+    );
+};
 
-    export default CareerSingle;
+export default CareerSingle;
