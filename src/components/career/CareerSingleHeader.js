@@ -1,9 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
-import { FaRegSmile, FaStar } from 'react-icons/fa';
-import { BiBuildingHouse, BiCurrentLocation } from 'react-icons/bi';
+import { BiCurrentLocation } from 'react-icons/bi';
 
-const CareerSingleHeader = () => {
+const CareerSingleHeader = ({ title }) => {
   return (
     <section
       className="page-header position-relative overflow-hidden ptb-120 bg-dark"
@@ -16,13 +15,13 @@ const CareerSingleHeader = () => {
           <div className="col-lg-8 col-12">
             <div className="company-info-wrap">
               <div className="company-overview">
-                <h1 className="display-5 fw-bold">Senior Backend Developer</h1>
+                <h1 className="display-5 fw-bold">{title}</h1>
                 <ul className="list-unstyled list-inline mb-0 mt-3">
                   <li className="list-inline-item me-4">
                     <span className="far fa-lg me-1">
                       <BiCurrentLocation className="mb-1" />
                     </span>{' '}
-                    United Kingdom
+                    Remote
                   </li>
                 </ul>
               </div>

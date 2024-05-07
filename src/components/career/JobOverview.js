@@ -16,16 +16,7 @@ const JobOverview = () => {
             </i>
             <div className="overview-item">
               <h6 className="mb-0">Location:</h6>
-              <span>London, UK</span>
-            </div>
-          </li>
-          <li>
-            <i className="far text-primary">
-              <BiUser className="mb-2 fa-lg" />
-            </i>
-            <div className="overview-item">
-              <h6 className="mb-0">Job Title:</h6>
-              <span>Designer</span>
+              <span>Remote - Worldwide</span>
             </div>
           </li>
           <li>
@@ -34,7 +25,7 @@ const JobOverview = () => {
             </i>
             <div className="overview-item">
               <h6 className="mb-0">Hours:</h6>
-              <span>50h / week</span>
+              <span>40h / week</span>
             </div>
           </li>
         </ul>

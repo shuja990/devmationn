@@ -57,7 +57,7 @@ const CareerFeature = () => {
                     </span>
                   ))}
                 </ul>
-                <Link href="/career-single" passHref>
+                <Link href={`/${jobCard.slug}`} passHref>
                   <div className="btn btn-outline-light btn-sm d-inline-block mt-4">
                     Apply Now
                   </div>

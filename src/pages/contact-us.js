@@ -12,7 +12,7 @@ const ContactUs = () => {
       <Navbar classOption="navbar-light" />
       <PageHeader
         title="Contact Us"
-        desc="Seamlessly actualize client-based users after out-of-the-box value data through frictionless expertise. Proactively coordinate quality quality vectors vis-a-vis supply chains. Quickly engage client-centric web services."
+        desc="Transform your digital landscape with Devmations. Our focus on cutting-edge technology and client satisfaction guarantees that your journey is smooth and rewarding. Take the first step towards digital transformation by reaching out to us now. Your success story starts here."
       />
       <ContactCard />
       <ContactForm />

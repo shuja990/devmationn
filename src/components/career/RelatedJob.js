@@ -31,7 +31,7 @@ const RelatedJob = () => {
         <div className="row">
           {careerJobCard.slice(0, 3).map((jobCard, i) => (
             <div key={i + 1} className="col-lg-4 col-md-6">
-              <div className="text-decoration-none mt-4 mt-lg-0 mt-xl-0 single-open-job p-5 bg-white d-block rounded-custom">
+              <div className="text-decoration-none mt-4 mt-lg-0 mt-xl-0 single-open-job p-5 bg-white d-block rounded-custom" style={{ height: "300px" }}>
                 <div className="d-flex justify-content-between align-items-center mb-2">
                   <span className="text-muted h6 mb-2 job-time">
                     <i className="far fa-lg me-2">

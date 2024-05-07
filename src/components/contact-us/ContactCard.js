@@ -18,14 +18,14 @@ const ContactCard = () => {
               <div className="contact-promo-info mb-4">
                 <h5>Chat with us</h5>
                 <p>
-                  We have got live Social Experts waiting to help you{' '}
-                  <strong>monday to friday</strong> from
-                  <strong>9am to 5pm EST.</strong>
+                  At Devmations, we're dedicated to transforming your business visions into reality. Our team of experts is available <strong>Monday to Friday</strong> from <strong>9 AM to 11 PM EST</strong> to discuss your needs, explore your ideas, and help you navigate the complexities of digital innovation.
                 </p>
               </div>
               <a
-                href="mailto:hellothemetags@gmail.com"
-                className="btn btn-link mt-auto"
+                href="https://api.whatsapp.com/send?phone=923025133646&text=Hey%20Devmations%20Team%2C%0A%0AI%E2%80%99m%20ready%20to%20shake%20things%20up%20with%20a%20new%20project%20and%20I%20think%20you%E2%80%99re%20the%20right%20crew%20for%20the%20job.%20Let%E2%80%99s%20chat%20about%20what%20we%20can%20create%20together!"
+                className="btn btn-primary mt-auto"
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 Chat with us
               </a>
@@ -39,13 +39,11 @@ const ContactCard = () => {
               <div className="contact-promo-info mb-4">
                 <h5>Email Us</h5>
                 <p>
-                  Simple drop us an email at{' '}
-                  <strong>hellothemetags@gmail.com</strong>
-                  and you will receive a reply within 24 hours
+                  Prefer writing? Drop us an email at <strong>info@devmations.com</strong> any time. Expect a detailed reply within 24 hours as we love to hear more about your project needs and how we can assist.
                 </p>
               </div>
               <a
-                href="mailto:hellothemetags@gmail.com"
+                href="mailto:info@devmations.com"
                 className="btn btn-primary mt-auto"
               >
                 Email Us
@@ -60,13 +58,12 @@ const ContactCard = () => {
               <div className="contact-promo-info mb-4">
                 <h5>Give us a call</h5>
                 <p>
-                  Give us a ring.Our Experts are standing by{' '}
-                  <strong>monday to friday</strong> from
-                  <strong>9am to 5pm EST.</strong>
+                  Our knowledgeable representatives are here to provide tailored solutions. Connect with us <strong>Monday to Friday</strong> from <strong>9 AM to 11 PM EST.</strong> Let’s discuss how we can help build your future solutions.
                 </p>
               </div>
-              <a href="tel:00-976-561-008" className="btn btn-link mt-auto">
-                00-976-561-008
+              <a href="tel:+923025133646" className="btn btn-primary mt-auto"
+              >
+                Call Us
               </a>
             </div>
           </div>

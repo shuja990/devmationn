@@ -907,54 +907,86 @@ const careerJobCard = [
   {
     type: 'Remote - Full Time',
     position: 'Developer',
-    title: 'Jr Frontend Developer',
+    title: 'Full Stack Developer',
     className: 'bg-primary-soft text-primary',
     listItem: [
       {
         media: 'Google',
-        location: 'London, UK',
+        location: 'Remote - Worldwide',
         salary: '$35-$45k',
       },
     ],
+    slug: "full-stack-engineer"
   },
   {
     type: 'Remote - Full Time',
-    position: 'Designer',
-    title: 'UI/UX and Product Designer',
+    position: 'Developer',
+    title: 'Mobile Application Developer',
     className: 'bg-danger-soft text-danger',
     listItem: [
       {
         media: 'Figma',
-        location: 'San Francissco',
+        location: 'Remote - Worldwide',
         salary: '$25-$35k',
       },
     ],
+    slug: "mobile-app-developer"
   },
   {
     type: 'Full Time',
-    position: 'Manager',
-    title: 'Senior Office Manager',
+    position: 'Developer',
+    title: 'AI and Machine Learning Developer',
     className: 'bg-success-soft text-success',
     listItem: [
       {
         media: 'Dribble',
-        location: 'California',
+        location: 'Remote - Worldwide',
         salary: '$55-$65k',
       },
     ],
+    slug: 'ai-machine-learning-engineer'
   },
   {
     type: 'Remote',
     position: 'Developer',
-    title: 'Senior Backend Developer',
+    title: 'Blochchain Developer',
 
     listItem: [
       {
         media: 'Slack',
-        location: 'United State US',
+        location: 'Remote - Worldwide',
         salary: '$55-$62k',
       },
     ],
+    slug: "blochchain-developer"
+  },
+  {
+    type: 'Remote',
+    position: 'Developer',
+    title: 'DevOps and Cloud Engineer',
+
+    listItem: [
+      {
+        media: 'Slack',
+        location: 'Remote - Worldwide',
+        salary: '$55-$62k',
+      },
+    ],
+    slug: "devops-cloud-engineer"
+  },
+  {
+    type: 'Remote',
+    position: 'Developer',
+    title: 'Wordpress and Shopify Developer',
+
+    listItem: [
+      {
+        media: 'Slack',
+        location: 'Remote - Worldwide',
+        salary: '$55-$62k',
+      },
+    ],
+    slug: "wordpress-shopify-developer"
   },
 ];
 

@@ -25,6 +25,7 @@ const ContactForm = ({ title, desc }) => {
 
   if (state.succeeded) {
     successToast()
+    state = null
   }
 
   return (
@@ -41,9 +42,9 @@ const ContactForm = ({ title, desc }) => {
             <div className="col-lg-6 col-md-8">
               <div className="section-heading">
                 <h2
-                >{title ? title : "Talk to Our Sales & Marketing Department Team"}</h2>
+                >{title ? title : "Discuss Your Vision with Our Project Specialists"}</h2>
                 <p>
-                  {desc ? desc : "Collaboratively promote client-focused convergence vis-a-vis customer directed alignments via standardized infrastructures."}
+                  {desc ? desc : "Whether you have a project in mind or need consultation on your digital strategy, we're ready. Drop us a line, and let's turn your ideas into reality."}
                 </p>
               </div>
               <form onSubmit={handleSubmit} className="register-form">
@@ -129,7 +130,7 @@ const ContactForm = ({ title, desc }) => {
                   </div>
                 </div>
                 <div className="g-recaptcha" data-sitekey="6LchJc0pAAAAAHj9zyud5dSfPiw3ZM5ODqPdibWK"></div>
-                <button type="submit" className="btn btn-primary mt-4">
+                <button type="submit" className="btn btn-primary mt-4 d-flex justify-content-center align-items-center" style={{ minHeight: "50px", width: "150px" }}>
                   {state.submitting ? <LoaderIcon /> : "Get in Touch"}
                 </button>
               </form>
