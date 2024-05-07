@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from '@layout/Layout';
 import Footer from '@layout/Footer/Footer';
 import Navbar from '@layout/Header/Navbar';
-import ReviewOne from '@components/review/ReviewOne';
 import ServiceOne from '@components/services/ServiceOne';
 import IntegrationOne from '@components/integration/IntegrationOne';
 import TestimonialOne from '@components/testimonial/TestimonialOne';
@@ -58,13 +57,12 @@ const SassCompanyTwoHome = () => {
     <Layout>
       <Navbar />
       <HeroSectionFourth />
-      <ReviewOne />
+      <SingleServicePromo title={data.section3.title}
+        desc={data.section3.desc} card1={data.section3.card1} card2={data.section3.card2} card3={data.section3.card3} />
       <ServiceOne />
       <WorkProcessTwo />
       <IntegrationOne />
       <TestimonialOne darkBg />
-      <SingleServicePromo title={data.section3.title}
-        desc={data.section3.desc} card1={data.section3.card1} card2={data.section3.card2} card3={data.section3.card3} light />
       <ContactForm />
       <Footer footerLight />
     </Layout>
