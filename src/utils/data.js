@@ -205,6 +205,10 @@ const footerPrimaryPages = [
   {
     title: 'Career',
     href: '/career',
+  },
+  {
+    title:"Contact Us",
+    href: '/contact-us',
   }
 ];
 
@@ -262,15 +266,15 @@ const navHomeOne = [
     title: 'AI and Machine Learning Solutions',
     info: 'Unlock powerful AI to automate tasks and gain insights.',
     href: 'ai-and-machine-learning-solutions',
-  }
-];
-
-const navHomeTwo = [
+  },
   {
     title: 'Cloud and DevOps Solutions',
     info: 'Simplify development & deployment for faster innovation.',
     href: 'cloud-and-devops-solutions',
   },
+];
+
+const navHomeTwo = [
   {
     title: 'Shopify Development',
     info: 'Build beautiful and functional Shopify stores that sell.',
@@ -290,6 +294,11 @@ const navHomeTwo = [
     title: 'MVP Development',
     info: 'Launch your minimum viable product quickly and test your idea.',
     href: 'mvp-development',
+  },
+  {
+    title: 'Data Entry',
+    info: 'Accurate and efficient data entry solutions to streamline your business operations.',
+    href: 'coming-soon',
   },
 ];
 

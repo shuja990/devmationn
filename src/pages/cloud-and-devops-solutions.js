@@ -17,7 +17,8 @@ const data = {
     },
     "section1": {
         "title": "Embrace Cloud-Native Development and DevOps Practices",
-        "desc": "At DevMations, we empower businesses with robust cloud and DevOps solutions. Our team of certified cloud architects and DevOps engineers leverages leading platforms like AWS, Azure, and GCP to design, deploy, and manage your infrastructure with maximum efficiency and scalability. We implement CI/CD pipelines for automated builds and deployments, ensuring faster time-to-market and reduced risks. Additionally, we utilize tools like Docker, Kubernetes, Terraform, and Ansible to streamline infrastructure provisioning, configuration management, and orchestration. By combining these technologies, we create a secure, reliable, and agile cloud environment that empowers your business to innovate and grow."
+        "desc": "At DevMations, we empower businesses with robust cloud and DevOps solutions. Our team of certified cloud architects and DevOps engineers leverages leading platforms like AWS, Azure, and GCP to design, deploy, and manage your infrastructure with maximum efficiency and scalability. We implement CI/CD pipelines for automated builds and deployments, ensuring faster time-to-market and reduced risks. Additionally, we utilize tools like Docker, Kubernetes, Terraform, and Ansible to streamline infrastructure provisioning, configuration management, and orchestration. By combining these technologies, we create a secure, reliable, and agile cloud environment that empowers your business to innovate and grow.",
+        "image": "/cloud-dev-ops/one.png"
     },
     "projects": {
         "title": "Our Successful Cloud & DevOps Projects",
@@ -25,7 +26,8 @@ const data = {
     },
     "section2": {
         "title": "The Benefits of Our Cloud & DevOps Expertise",
-        "desc": "Partnering with DevMations for your cloud and DevOps needs unlocks a world of advantages. Our certified experts design, deploy, and manage your infrastructure on leading cloud platforms like AWS, Azure, and GCP, optimizing for efficiency, scalability, and cost savings. We implement automated CI/CD pipelines and leverage tools like Docker and Kubernetes to streamline development and deployment, while prioritizing security and reliability with robust measures and disaster recovery plans. This holistic approach empowers your business to innovate faster and thrive in the cloud."
+        "desc": "Partnering with DevMations for your cloud and DevOps needs unlocks a world of advantages. Our certified experts design, deploy, and manage your infrastructure on leading cloud platforms like AWS, Azure, and GCP, optimizing for efficiency, scalability, and cost savings. We implement automated CI/CD pipelines and leverage tools like Docker and Kubernetes to streamline development and deployment, while prioritizing security and reliability with robust measures and disaster recovery plans. This holistic approach empowers your business to innovate faster and thrive in the cloud.",
+        "image": "/cloud-dev-ops/two.jpg"
     },
     "section3": {
         "title": "Why Choose DevMations for Your Cloud & DevOps Needs?",
@@ -62,11 +64,11 @@ const SingleService = () => {
                 desc={data.header.desc}
             />
             <SingleServiceFeature title={data.section1.title}
-                desc={data.section1.desc} />
+                desc={data.section1.desc} image={data.section1.image}/>
             <OurOffice title={data.projects.title}
                 desc={data.projects.desc} />
             <SingleServiceFeatureTwo title={data.section2.title}
-                desc={data.section2.desc} />
+                desc={data.section2.desc} image={data.section2.image}/>
             <SingleServicePromo title={data.section3.title}
                 desc={data.section3.desc} card1={data.section3.card1} card2={data.section3.card2} card3={data.section3.card3} />
             {/* <SingleServiceRegister /> */}

@@ -8,8 +8,9 @@ import {
   footerPrimaryPages,
   footerPages,
   footerTemplate,
+  navHomeOne,
+  navHomeTwo,
 } from '../../utils/data';
-import Rating from '../../components/common/Rating';
 
 const Footer = ({ footerLight, style, footerGradient }) => {
   return (
@@ -29,23 +30,23 @@ const Footer = ({ footerLight, style, footerGradient }) => {
                       <Image
                         width={213}
                         height={46}
-                        src="/logo.png"
+                        src="/logo-white.png"
                         alt="logo"
                         className="img-fluid logo-white"
                       // style={{width:"150"}}
                       />
                     ) : (
                       <Image
-                        width={113}
-                        height={36}
-                        src="/company-logo.svg"
+                        width={213}
+                        height={46}
+                        src="/logo-white.png"
                         alt="logo"
                         className="img-fluid logo-color"
                       />
                     )}
                   </div>
                   <p className='text-white'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Devmations is a premier software development company specializing in cutting-edge web app solutions. Our expertise spans the MERN stack, Next.js, Python, Laravel, Vue.js, PHP, Django, and Go. We deliver innovative and robust digital experiences tailored to your business needs. Discover the future of development with Devmations.
                   </p>
                 </div>
               </div>
@@ -72,7 +73,7 @@ const Footer = ({ footerLight, style, footerGradient }) => {
                     <div className="footer-single-col">
                       <h3>Services</h3>
                       <ul className="list-unstyled footer-nav-list mb-lg-0">
-                        {footerPages.map((page, i) => (
+                        {[...navHomeOne].map((page, i) => (
                           <li key={i + 1} className='text-white'>
                             <Link href={page.href}>
                               <a className="text-decoration-none text-white">
@@ -87,9 +88,8 @@ const Footer = ({ footerLight, style, footerGradient }) => {
                   </div>
                   <div className="col-md-4 col-lg-4 mt-4 mt-md-0 mt-lg-0">
                     <div className="footer-single-col">
-                      <h3>Contact us</h3>
                       <ul className="list-unstyled footer-nav-list mb-lg-0">
-                        {footerTemplate.map((template, i) => (
+                        {navHomeTwo.map((template, i) => (
                           <li key={i + 1}>
                             <Link href={template.href}>
                               <a className="text-decoration-none text-white">

@@ -19,7 +19,7 @@ const ComingSoon = () => {
               <Link href="/">
                 <a className="mb-5 d-block">
                   <Image
-                    width={113}
+                    width={213}
                     height={36}
                     src="/logo-white.png"
                     alt="logo"
@@ -30,12 +30,12 @@ const ComingSoon = () => {
 
               <h5 className="text-white">We are Coming Soon...</h5>
               <h1 className="text-white">
-                We are Working Our New Website, Please Stay With us!
+                We are Working On this Page, Please Stay With us!
               </h1>
               <div className="action-btns">
-                <Link href="/contact-us">
+                <Link href="/">
                   <a className="btn btn-primary mt-5 popup-with-form">
-                    Notify Me!
+                    Go to Home
                   </a>
                 </Link>
               </div>

@@ -17,7 +17,8 @@ const data = {
     },
     "section1": {
         "title": "Design that Captivates and Converts",
-        "desc": "At DevMations, we believe that exceptional UI/UX design is the foundation of any successful digital product. Our team of passionate designers brings together creativity and user-centricity to craft interfaces that are not only visually stunning but also intuitive, user-friendly, and drive results. We leverage cutting-edge design tools like Figma, Adobe XD, and more to create user journeys that are smooth, seamless, and engaging across all devices."
+        "desc": "At DevMations, we believe that exceptional UI/UX design is the foundation of any successful digital product. Our team of passionate designers brings together creativity and user-centricity to craft interfaces that are not only visually stunning but also intuitive, user-friendly, and drive results. We leverage cutting-edge design tools like Figma, Adobe XD, and more to create user journeys that are smooth, seamless, and engaging across all devices.",
+        "image": "/ui-ux/one.png"
     },
     "projects": {
         "title": "Our UI/UX Design Portfolio",
@@ -25,7 +26,8 @@ const data = {
     },
     "section2": {
         "title": "We Design for People, Not Just Pixels",
-        "desc": "Our UI/UX design process is focused on understanding your unique needs and target audience. We begin with in-depth research and user analysis to gain a deep understanding of user behavior and pain points. Then, we move on to iterative design, prototyping, and user testing to ensure your interface is not only aesthetically pleasing but also highly functional and meets the specific needs of your users. We believe in close collaboration throughout the process, keeping you involved and informed at every step."
+        "desc": "Our UI/UX design process is focused on understanding your unique needs and target audience. We begin with in-depth research and user analysis to gain a deep understanding of user behavior and pain points. Then, we move on to iterative design, prototyping, and user testing to ensure your interface is not only aesthetically pleasing but also highly functional and meets the specific needs of your users. We believe in close collaboration throughout the process, keeping you involved and informed at every step.",
+        "image": "/ui-ux/two.png"
     },
     "section3": {
         "title": "The Value of User-Centered Design",
@@ -62,11 +64,11 @@ const SingleService = () => {
                 desc={data.header.desc}
             />
             <SingleServiceFeature title={data.section1.title}
-                desc={data.section1.desc} />
+                desc={data.section1.desc} image={data.section1.image} />
             <OurOffice title={data.projects.title}
                 desc={data.projects.desc} />
             <SingleServiceFeatureTwo title={data.section2.title}
-                desc={data.section2.desc} />
+                desc={data.section2.desc} image={data.section2.image} />
             <SingleServicePromo title={data.section3.title}
                 desc={data.section3.desc} card1={data.section3.card1} card2={data.section3.card2} card3={data.section3.card3} />
             {/* <SingleServiceRegister /> */}

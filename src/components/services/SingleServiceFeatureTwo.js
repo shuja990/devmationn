@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-const SingleServiceFeatureTwo = ({ title, desc }) => {
+const SingleServiceFeatureTwo = ({ title, desc, image }) => {
   return (
     <section className="feature-section pt-60 pb-120">
       <div className="container">
@@ -20,7 +20,7 @@ const SingleServiceFeatureTwo = ({ title, desc }) => {
                 <Image
                   width={540}
                   height={360}
-                  src="/dashboard-img-4.png"
+                  src={image}
                   alt=""
                   className="img-fluid rounded-custom shadow-sm"
                 />

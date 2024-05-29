@@ -17,7 +17,8 @@ const data = {
     },
     "section1": {
         "title": "Transform Your Business with Secure and Transparent Blockchain Solutions",
-        "desc": "At DevMations, we are a team of passionate blockchain developers who help businesses leverage the power of this transformative technology. We specialize in building secure, scalable, and user-friendly blockchain applications across various domains. While we don't develop entire blockchains or cryptocurrencies, we offer a range of services to integrate blockchain functionalities into your existing infrastructure. This includes developing NFT marketplaces, smart contracts for automated transactions and agreements, secure payment gateways using blockchain technology, and seamless wallet integration for a smooth user experience."
+        "desc": "At DevMations, we are a team of passionate blockchain developers who help businesses leverage the power of this transformative technology. We specialize in building secure, scalable, and user-friendly blockchain applications across various domains. While we don't develop entire blockchains or cryptocurrencies, we offer a range of services to integrate blockchain functionalities into your existing infrastructure. This includes developing NFT marketplaces, smart contracts for automated transactions and agreements, secure payment gateways using blockchain technology, and seamless wallet integration for a smooth user experience.",
+        "image": "/blockchain/one.png"
     },
     "projects": {
         "title": "Our Blockchain Development Portfolio",
@@ -25,7 +26,8 @@ const data = {
     },
     "section2": {
         "title": "We Craft Custom Blockchain Solutions for Your Needs",
-        "desc": "Our blockchain development process is collaborative and tailored to your specific requirements. We begin by understanding your business goals and the potential applications of blockchain technology. Then, our team of experts designs and develops secure smart contracts, integrates blockchain functionalities into your existing systems, and ensures seamless user interaction with your blockchain-powered solution. We leverage cutting-edge blockchain protocols and stay updated on the evolving landscape to deliver future-proof solutions."
+        "desc": "Our blockchain development process is collaborative and tailored to your specific requirements. We begin by understanding your business goals and the potential applications of blockchain technology. Then, our team of experts designs and develops secure smart contracts, integrates blockchain functionalities into your existing systems, and ensures seamless user interaction with your blockchain-powered solution. We leverage cutting-edge blockchain protocols and stay updated on the evolving landscape to deliver future-proof solutions.",
+        "image": "/blockchain/two.jpg"
     },
     "section3": {
         "title": "Why Choose DevMations for Your Blockchain Project?",
@@ -62,11 +64,11 @@ const SingleService = () => {
                 desc={data.header.desc}
             />
             <SingleServiceFeature title={data.section1.title}
-                desc={data.section1.desc} />
+                desc={data.section1.desc} image={data.section1.image} />
             <OurOffice title={data.projects.title}
                 desc={data.projects.desc} />
             <SingleServiceFeatureTwo title={data.section2.title}
-                desc={data.section2.desc} />
+                desc={data.section2.desc} image={data.section2.image} />
             <SingleServicePromo title={data.section3.title}
                 desc={data.section3.desc} card1={data.section3.card1} card2={data.section3.card2} card3={data.section3.card3} />
             {/* <SingleServiceRegister /> */}

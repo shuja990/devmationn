@@ -17,7 +17,8 @@ const data = {
     },
     "section1": {
       "title": "Turn Your E-commerce Vision into Reality",
-      "desc": "At DevMations, we specialize in crafting exceptional Shopify stores that not only look stunning but also convert visitors into loyal customers. Our team of experienced developers leverages their expertise in Shopify themes, plugins, and integrations to build a robust and scalable online store tailored to your specific needs and brand identity. We focus on creating a seamless user experience that encourages exploration, simplifies purchases, and ultimately drives sales growth."
+      "desc": "At DevMations, we specialize in crafting exceptional Shopify stores that not only look stunning but also convert visitors into loyal customers. Our team of experienced developers leverages their expertise in Shopify themes, plugins, and integrations to build a robust and scalable online store tailored to your specific needs and brand identity. We focus on creating a seamless user experience that encourages exploration, simplifies purchases, and ultimately drives sales growth.",
+      "image": "/shopify/one.png"
     },
     "projects": {
       "title": "Our Successful Shopify Development Projects",
@@ -25,7 +26,8 @@ const data = {
     },
     "section2": {
       "title": "From Design to Launch and Beyond: Your Shopify Partner",
-      "desc": "We offer a comprehensive Shopify development service that takes you from the initial concept all the way to a thriving online store. We begin by collaborating with you to understand your brand vision and target audience. Then, our design team creates a visually appealing and user-friendly storefront. Our developers meticulously craft the technical aspects of your store, ensuring optimal performance and scalability. Finally, we provide ongoing support and maintenance to keep your store secure, updated, and meeting your evolving needs."
+      "desc": "We offer a comprehensive Shopify development service that takes you from the initial concept all the way to a thriving online store. We begin by collaborating with you to understand your brand vision and target audience. Then, our design team creates a visually appealing and user-friendly storefront. Our developers meticulously craft the technical aspects of your store, ensuring optimal performance and scalability. Finally, we provide ongoing support and maintenance to keep your store secure, updated, and meeting your evolving needs.",
+      "image": "/shopify/two.jpg",
     },
     "section3": {
       "title": "The Value of Our Shopify Development Expertise",
@@ -63,11 +65,11 @@ const SingleService = () => {
                 desc={data.header.desc}
             />
             <SingleServiceFeature title={data.section1.title}
-                desc={data.section1.desc} />
+                desc={data.section1.desc}  image={data.section1.image}/>
             <OurOffice title={data.projects.title}
                 desc={data.projects.desc} />
             <SingleServiceFeatureTwo title={data.section2.title}
-                desc={data.section2.desc} />
+                desc={data.section2.desc}  image={data.section2.image}/>
             <SingleServicePromo title={data.section3.title}
                 desc={data.section3.desc} card1={data.section3.card1} card2={data.section3.card2} card3={data.section3.card3} />
             {/* <SingleServiceRegister /> */}

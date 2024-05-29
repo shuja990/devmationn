@@ -29,11 +29,11 @@ const HeroSectionTwo = () => {
                     <a className="btn btn-soft-primary mt-4">Meet Our Team</a>
                   </Link>
                 </div>
-                <img src="/about-img-1.jpg" alt="about" className="img-fluid about-img-first mt-5 rounded-custom shadow"/>
+                <img src="/about/about-img-1.png" alt="about" className="img-fluid about-img-first mt-5 rounded-custom shadow"/>
               </div>
               <div className="about-content-right">
-              <img src="/about-img-2.jpg" alt="about" className="img-fluid mb-5 rounded-custom shadow"/>
-              <img src="/about-img-3.jpg" alt="about" className="rounded-custom about-img-last shadow"/>
+              <img src="/about/about-img-2.png" alt="about" className="img-fluid mb-5 rounded-custom shadow"/>
+              <img src="/about/about-img-3.png" alt="about" className="rounded-custom about-img-last shadow"/>
               </div>
             </div>
           </div>

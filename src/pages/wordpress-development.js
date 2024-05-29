@@ -17,7 +17,9 @@ const data = {
     },
     "section1": {
         "title": "Transform Your WordPress Website into a Success Story",
-        "desc": "At DevMations, we're passionate about helping businesses leverage the full potential of WordPress. Our skilled developers offer a comprehensive suite of services, from crafting stunning and functional WordPress websites to building custom plugins and optimizing performance for a seamless user experience. Whether you need a new website from scratch, want to enhance an existing one, or require assistance with plugin development or speed optimization, we have the expertise to deliver exceptional results."
+        "desc": "At DevMations, we're passionate about helping businesses leverage the full potential of WordPress. Our skilled developers offer a comprehensive suite of services, from crafting stunning and functional WordPress websites to building custom plugins and optimizing performance for a seamless user experience. Whether you need a new website from scratch, want to enhance an existing one, or require assistance with plugin development or speed optimization, we have the expertise to deliver exceptional results.",
+        "image": "/wordpress/one.jpg"
+
     },
     "projects": {
         "title": "Our Successful WordPress Development Projects",
@@ -25,7 +27,8 @@ const data = {
     },
     "section2": {
         "title": "We Go Beyond Design: A Holistic Approach to WordPress",
-        "desc": "Our WordPress development services encompass all aspects of your website's needs. We collaborate closely with you to understand your unique goals and target audience. Our design team creates a visually appealing and user-friendly website that reflects your brand identity. Our developers ensure the technical foundation is secure, scalable, and optimized for performance. Additionally, we offer custom plugin development to extend WordPress functionalities and cater to your specific requirements. Finally, we can help optimize your website's speed and performance, ensuring a fast and smooth user experience for your visitors."
+        "desc": "Our WordPress development services encompass all aspects of your website's needs. We collaborate closely with you to understand your unique goals and target audience. Our design team creates a visually appealing and user-friendly website that reflects your brand identity. Our developers ensure the technical foundation is secure, scalable, and optimized for performance. Additionally, we offer custom plugin development to extend WordPress functionalities and cater to your specific requirements. Finally, we can help optimize your website's speed and performance, ensuring a fast and smooth user experience for your visitors.",
+        "image": "/wordpress/two.jpg"
     },
     "section3": {
         "title": "Why Choose DevMations for Your WordPress Needs?",
@@ -63,11 +66,11 @@ const SingleService = () => {
                 desc={data.header.desc}
             />
             <SingleServiceFeature title={data.section1.title}
-                desc={data.section1.desc} />
+                desc={data.section1.desc} image={data.section1.image}/>
             <OurOffice title={data.projects.title}
                 desc={data.projects.desc} />
             <SingleServiceFeatureTwo title={data.section2.title}
-                desc={data.section2.desc} />
+                desc={data.section2.desc} image={data.section2.image}/>
             <SingleServicePromo title={data.section3.title}
                 desc={data.section3.desc} card1={data.section3.card1} card2={data.section3.card2} card3={data.section3.card3} />
             {/* <SingleServiceRegister /> */}

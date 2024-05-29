@@ -17,7 +17,8 @@ const data = {
     },
     section1: {
         title: "Empower Decision-Making with AI & Machine Learning",
-        desc: "At DevMations, we help businesses unlock the true potential of AI and Machine Learning. We don't create models from scratch, but excel at tailoring existing solutions to your specific needs. Our team of experts can leverage Supervised, Unsupervised Learning, MLOps, Fine-Tuning LLMs, NLP, OpenAI, Gemini, and Claude integrations to develop intelligent systems that automate tasks, generate insights, and optimize processes. From streamlining operations to enhancing customer experiences, we empower you to make data-driven decisions that drive real business results."
+        desc: "At DevMations, we help businesses unlock the true potential of AI and Machine Learning. We don't create models from scratch, but excel at tailoring existing solutions to your specific needs. Our team of experts can leverage Supervised, Unsupervised Learning, MLOps, Fine-Tuning LLMs, NLP, OpenAI, Gemini, and Claude integrations to develop intelligent systems that automate tasks, generate insights, and optimize processes. From streamlining operations to enhancing customer experiences, we empower you to make data-driven decisions that drive real business results.",
+        image:"/ai-ml/one.png"
     },
     projects: {
         title: "Our AI & Machine Learning Projects",
@@ -25,7 +26,8 @@ const data = {
     },
     section2: {
         title: "Your Trusted Partner in AI & Machine Learning Integration",
-        desc: "We understand that successful AI implementation requires more than just technology. Our team works closely with you to understand your unique challenges and goals.  We then identify the most suitable AI/ML solutions and seamlessly integrate them into your existing workflows.  We also provide ongoing support and maintenance to ensure your AI systems continue to deliver value over time."
+        desc: "We understand that successful AI implementation requires more than just technology. Our team works closely with you to understand your unique challenges and goals.  We then identify the most suitable AI/ML solutions and seamlessly integrate them into your existing workflows.  We also provide ongoing support and maintenance to ensure your AI systems continue to deliver value over time.",
+        image:"/ai-ml/AI.jpg"
     },
     section3: {
         title: "Why Choose DevMations for AI & Machine Learning?",
@@ -62,11 +64,11 @@ const SingleService = () => {
                 desc={data.header.desc}
             />
             <SingleServiceFeature title={data.section1.title}
-                desc={data.section1.desc} />
+                desc={data.section1.desc} image={data.section1.image}/>
             <OurOffice title={data.projects.title}
                 desc={data.projects.desc} />
             <SingleServiceFeatureTwo title={data.section2.title}
-                desc={data.section2.desc} />
+                desc={data.section2.desc} image={data.section2.image}/>
             <SingleServicePromo title={data.section3.title}
                 desc={data.section3.desc} card1={data.section3.card1} card2={data.section3.card2} card3={data.section3.card3} />
             {/* <SingleServiceRegister /> */}
