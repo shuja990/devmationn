@@ -32,4 +32,4 @@ const VideoModal = ({ className, onlyButton }) => {
   );
 };
 
-export default dynamic(() => Promise.resolve(VideoModal), { ssr: false });
+export default dynamic(() => Promise.resolve(VideoModal), { ssr: true });

@@ -24,4 +24,4 @@ const AnimatedButton = () => {
   );
 };
 
-export default dynamic(() => Promise.resolve(AnimatedButton), { ssr: false });
+export default dynamic(() => Promise.resolve(AnimatedButton), { ssr: true });

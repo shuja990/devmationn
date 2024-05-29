@@ -32,4 +32,4 @@ const DarkModal = ({ className, onlyButton }) => {
   );
 };
 
-export default dynamic(() => Promise.resolve(DarkModal), { ssr: false });
+export default dynamic(() => Promise.resolve(DarkModal), { ssr: true });

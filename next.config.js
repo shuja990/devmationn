@@ -1,4 +1,6 @@
 
+const withSitemap = require('next-sitemap');
+
 module.exports = ({
   eslint: {
     // Warning: This allows production builds to successfully complete even if
@@ -14,7 +16,10 @@ module.exports = ({
     path: '/',
   },
 
- 
+  ...withSitemap({
+    siteUrl: 'https://www.devmations.com',
+    generateRobotsTxt: true, // (optional)
+  }), 
 });
 
 

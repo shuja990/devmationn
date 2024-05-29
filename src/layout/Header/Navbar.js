@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { HiMenu, HiOutlineX } from 'react-icons/hi';
 
 import OffCanvasMenu from './OffCanvasMenu';
-import { navCompanyLinks, navCompanyPage, navHomeOne, navHomeTwo } from '../../utils/data';
+import { navHomeOne, navHomeTwo } from '../../utils/data';
 import dynamic from 'next/dynamic';
 
 const Navbar = ({ navDark, classOption }) => {
@@ -128,13 +128,13 @@ const Navbar = ({ navDark, classOption }) => {
                           </Link>
                         </span>
                       ))}
-                        <Link href="services">
-                          <a className="dropdown-link">
-                            <span className="dropdown-info mb-0">
-                              <span className="drop-title">View all</span>
-                            </span>
-                          </a>
-                        </Link>
+                      <Link href="services">
+                        <a className="dropdown-link">
+                          <span className="dropdown-info mb-0">
+                            <span className="drop-title">View all</span>
+                          </span>
+                        </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -201,7 +201,7 @@ const Navbar = ({ navDark, classOption }) => {
 
           <div className="action-btns text-end me-5 me-lg-0 d-none d-md-block d-lg-block">
             {/* <Link href="request-demo"> */}
-              <a href="#get-started-with-us" className="btn btn-primary">Get Started</a>
+            <a href="#get-started-with-us" className="btn btn-primary">Get Started</a>
             {/* </Link> */}
           </div>
 
@@ -240,4 +240,4 @@ const Navbar = ({ navDark, classOption }) => {
   );
 };
 
-export default dynamic(() => Promise.resolve(Navbar), { ssr: false });
+export default dynamic(() => Promise.resolve(Navbar), { ssr: true });

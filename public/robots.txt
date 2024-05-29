@@ -1,3 +1,9 @@
-# https://www.robotstxt.org/robotstxt.html
+# *
 User-agent: *
-Disallow:
+Allow: /
+
+# Host
+Host: https://www.devmations.com
+
+# Sitemaps
+Sitemap: https://www.devmations.com/sitemap.xml

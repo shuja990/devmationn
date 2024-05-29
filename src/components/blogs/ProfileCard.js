@@ -57,4 +57,4 @@ const ProfileCard = () => {
   );
 };
 
-export default dynamic(() => Promise.resolve(ProfileCard), { ssr: false });
+export default dynamic(() => Promise.resolve(ProfileCard), { ssr: true });
