@@ -15,11 +15,6 @@ module.exports = ({
     loader: 'akamai',
     path: '/',
   },
-
-  ...withSitemap({
-    siteUrl: 'https://www.devmations.com',
-    generateRobotsTxt: true, // (optional)
-  }), 
 });
 
 
