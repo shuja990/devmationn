@@ -1,5 +1,5 @@
 
-const withSitemap = require('next-sitemap');
+import withSitemap from 'next-sitemap';
 
 module.exports = ({
   eslint: {
@@ -15,6 +15,12 @@ module.exports = ({
     loader: 'akamai',
     path: '/',
   },
+
+  ...withSitemap({
+    siteUrl: 'https://www.devmations.com',
+    generateRobotsTxt: true, // (optional)
+  }),
+ 
 });
 
 
