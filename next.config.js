@@ -1,6 +1,4 @@
 
-import withSitemap from 'next-sitemap';
-
 module.exports = ({
   eslint: {
     // Warning: This allows production builds to successfully complete even if
@@ -14,13 +12,7 @@ module.exports = ({
   images: {
     loader: 'akamai',
     path: '/',
-  },
-
-  ...withSitemap({
-    siteUrl: 'https://www.devmations.com',
-    generateRobotsTxt: true, // (optional)
-  }),
- 
+  }, 
 });
 
 
