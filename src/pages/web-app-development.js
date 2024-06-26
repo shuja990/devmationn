@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Layout from '@layout/Layout';
 import Footer from '@layout/Footer/Footer';
 import Navbar from '@layout/Header/Navbar';
@@ -26,9 +25,8 @@ const data = {
   },
   section2: {
     title: "Comprehensive Web Solutions That Grow with Your Business",
-    desc: "Our web development services are designed to be as dynamic as your business. From initial concept to final rollout, and beyond into ongoing maintenance, we're with you at every step. Our team excels in Laravel, Vue.js, PHP, Django, and Go, crafting applications that are not only fast and reliable but also secure and scalable. With our proactive approach to project management, we keep you informed and involved, ensuring that your web app aligns perfectly with both your immediate needs and long-term goals."
-    , image: "/web/two.jpg"
-
+    desc: "Our web development services are designed to be as dynamic as your business. From initial concept to final rollout, and beyond into ongoing maintenance, we're with you at every step. Our team excels in Laravel, Vue.js, PHP, Django, and Go, crafting applications that are not only fast and reliable but also secure and scalable. With our proactive approach to project management, we keep you informed and involved, ensuring that your web app aligns perfectly with both your immediate needs and long-term goals.",
+    image: "/web/two.jpg"
   },
   section3: {
     title: "Proven Success in Web Development",
@@ -53,9 +51,16 @@ const data = {
     title: "Ready to Start Your Web Development Journey?",
     desc: "Let's make your vision come to life. Fill out the form below to schedule a consultation with one of our web development experts. We're excited to work with you to build something amazing. Your next big step starts here."
   }
+};
+
+export async function getServerSideProps() {
+  // Return the predefined data
+  return {
+    props: { data }
+  };
 }
 
-const SingleService = () => {
+const SingleService = ({ data }) => {
   return (
     <Layout title="Services" desc="This is services single page">
       <Navbar />
@@ -63,18 +68,31 @@ const SingleService = () => {
         title={data.header.title}
         desc={data.header.desc}
       />
-      <SingleServiceFeature title={data.section1.title}
-        desc={data.section1.desc} image={data.section1.image} />
-      <OurOffice title={data.projects.title}
-        desc={data.projects.desc} />
-      <SingleServiceFeatureTwo title={data.section2.title}
-        desc={data.section2.desc} image={data.section2.image} />
-      <SingleServicePromo title={data.section3.title}
-        desc={data.section3.desc} card1={data.section3.card1} card2={data.section3.card2} card3={data.section3.card3} />
-      {/* <SingleServiceRegister /> */}
-      <ContactForm title={data.CTA.title}
-        desc={data.CTA.desc} />
-
+      <SingleServiceFeature
+        title={data.section1.title}
+        desc={data.section1.desc}
+        image={data.section1.image}
+      />
+      <OurOffice
+        title={data.projects.title}
+        desc={data.projects.desc}
+      />
+      <SingleServiceFeatureTwo
+        title={data.section2.title}
+        desc={data.section2.desc}
+        image={data.section2.image}
+      />
+      <SingleServicePromo
+        title={data.section3.title}
+        desc={data.section3.desc}
+        card1={data.section3.card1}
+        card2={data.section3.card2}
+        card3={data.section3.card3}
+      />
+      <ContactForm
+        title={data.CTA.title}
+        desc={data.CTA.desc}
+      />
       <Footer footerLight />
     </Layout>
   );

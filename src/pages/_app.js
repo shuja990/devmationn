@@ -1,4 +1,4 @@
-// import '@assets/css/bootstrap.min.css';
+// pages/_app.js
 import '@assets/scss/main.scss';
 import '@assets/fonts/fontawesome-all.min.css';
 
@@ -7,11 +7,12 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import Script from 'next/script'
 
-//Modal Video
+// Modal Video
 import 'react-modal-video/scss/modal-video.scss';
+
 import Head from 'next/head';
+import Script from 'next/script';
 import { Fragment } from 'react';
 
 function MyApp({ Component, pageProps }) {
@@ -27,8 +28,6 @@ function MyApp({ Component, pageProps }) {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
         />
-
-
       </Head>
       <Component {...pageProps} />
     </Fragment>

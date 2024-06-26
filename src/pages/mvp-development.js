@@ -18,7 +18,7 @@ const data = {
     section1: {
         title: "Bring Your Ideas to Life Quickly and Efficiently",
         desc: "At DevMations, we understand the importance of validating your product concept before investing significant resources. Our MVP development services are designed to help you get your minimum viable product (MVP) to market quickly and efficiently. We utilize agile methodologies and lean development principles to create a core version of your product with just the essential features. This allows you to gather real-world user feedback and iterate based on market demands, ensuring your final product caters to your target audience's needs.",
-        image:"/mvp/one.png"
+        image: "/mvp/one.png"
     },
     projects: {
         title: "Our Successful MVP Development Projects",
@@ -27,7 +27,7 @@ const data = {
     section2: {
         title: "A Streamlined Process for Building Your MVP",
         desc: "Our MVP development process is designed to be collaborative and efficient. We work closely with you to understand your vision, target audience, and key functionalities.  We then prioritize features, design a user-friendly interface, and develop a functional MVP within a defined timeframe and budget. Throughout the process, we provide clear communication and keep you involved in every step.",
-        image:"/mvp/two.jpg",
+        image: "/mvp/two.jpg",
     },
     section3: {
         title: "The Benefits of Choosing DevMations for MVP Development",
@@ -52,11 +52,16 @@ const data = {
         title: "Ready to Launch Your MVP?",
         desc: "Let's turn your vision into a reality. Fill out the form below to schedule a free consultation with our MVP development experts. We'll help you validate your concept and develop a successful product roadmap."
     }
+};
+
+export async function getServerSideProps() {
+    // Return the predefined data
+    return {
+        props: { data }
+    };
 }
 
-
-
-const SingleService = () => {
+const SingleService = ({ data }) => {
     return (
         <Layout title="Services" desc="This is services single page">
             <Navbar />
@@ -64,18 +69,32 @@ const SingleService = () => {
                 title={data.header.title}
                 desc={data.header.desc}
             />
-            <SingleServiceFeature title={data.section1.title}
-                desc={data.section1.desc} image={data.section1.image}/>
-            <OurOffice title={data.projects.title}
-                desc={data.projects.desc} />
-            <SingleServiceFeatureTwo title={data.section2.title}
-                desc={data.section2.desc} image={data.section2.image}/>
-            <SingleServicePromo title={data.section3.title}
-                desc={data.section3.desc} card1={data.section3.card1} card2={data.section3.card2} card3={data.section3.card3} />
+            <SingleServiceFeature 
+                title={data.section1.title}
+                desc={data.section1.desc} 
+                image={data.section1.image} 
+            />
+            <OurOffice 
+                title={data.projects.title}
+                desc={data.projects.desc} 
+            />
+            <SingleServiceFeatureTwo 
+                title={data.section2.title}
+                desc={data.section2.desc} 
+                image={data.section2.image} 
+            />
+            <SingleServicePromo 
+                title={data.section3.title}
+                desc={data.section3.desc} 
+                card1={data.section3.card1} 
+                card2={data.section3.card2} 
+                card3={data.section3.card3} 
+            />
             {/* <SingleServiceRegister /> */}
-            <ContactForm title={data.CTA.title}
-                desc={data.CTA.desc} />
-
+            <ContactForm 
+                title={data.CTA.title}
+                desc={data.CTA.desc} 
+            />
             <Footer footerLight />
         </Layout>
     );

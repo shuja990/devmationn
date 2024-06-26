@@ -9,9 +9,9 @@ import CareerSingleHeader from '@components/career/CareerSingleHeader';
 import ContactForm from '@components/contact-us/ContactForm';
 
 const data = {
-    "title": "Blockchain Developer",
-    "desc": "Develop and integrate secure, scalable blockchain solutions at DevMations, a leading service-based company.",
-    "responsibilities": [
+    title: "Blockchain Developer",
+    desc: "Develop and integrate secure, scalable blockchain solutions at DevMations, a leading service-based company.",
+    responsibilities: [
         "Design, develop, and implement smart contracts for various blockchain platforms.",
         "Ensure security and efficiency of blockchain applications.",
         "Contribute to the development and maintenance of blockchain infrastructure.",
@@ -19,7 +19,7 @@ const data = {
         "Collaborate with cross-functional teams (designers, engineers, product managers).",
         "Write clean, well-documented, and maintainable code."
     ],
-    "requirements": [
+    requirements: [
         "Bachelor's degree in Computer Science, Information Technology, or a related field (or equivalent experience).",
         "4 years of experience developing blockchain applications.",
         "Strong understanding of blockchain concepts (e.g., consensus mechanisms, cryptography).",
@@ -28,7 +28,7 @@ const data = {
         "Excellent problem-solving and analytical skills.",
         "Passion for innovation and emerging technologies."
     ],
-    "skills": [
+    skills: [
         "Solidity (or similar language)",
         "Blockchain protocols (e.g., Ethereum, Hyperledger Fabric)",
         "Distributed systems",
@@ -37,15 +37,26 @@ const data = {
         "Software development best practices",
         "Version control systems (e.g., Git)"
     ]
+};
+
+export async function getServerSideProps() {
+    // Return the predefined data
+    return {
+        props: { data }
+    };
 }
 
-
-const CareerSingle = () => {
+const CareerSingle = ({ data }) => {
     return (
         <Layout title={data.title} >
             <Navbar classOption="navbar-light" />
             <CareerSingleHeader title={data.title} />
-            <JobDetails desc={data.desc} skills={data.skills} responsibilities={data.responsibilities} requirements={data.requirements} />
+            <JobDetails
+                desc={data.desc}
+                skills={data.skills}
+                responsibilities={data.responsibilities}
+                requirements={data.requirements}
+            />
             <RelatedJob />
             <ContactForm />
             <Footer footerLight />

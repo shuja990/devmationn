@@ -20,7 +20,7 @@ const NotFoundPage = () => {
                 <p className="lead">
                   Efficiently reinvent next-generation scenarios without focused
                   networks. Collaboratively productize superior technology
-                  before robust potentialities.{' '}
+                  before robust potentialities.
                 </p>
 
                 <Link href="/">

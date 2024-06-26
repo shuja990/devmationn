@@ -9,7 +9,18 @@ import TestimonialTwo from '@components/testimonial/TestimonialTwo';
 import FeatureImgContentTwo from '@components/feature-img-content/FeatureImgContentTwo';
 import ContactForm from '@components/contact-us/ContactForm';
 
+// Server-side rendering function
+export async function getServerSideProps() {
+  // Fetch any data you need for the page here
+  // For example:
+  // const res = await fetch('https://api.example.com/about-data');
+  // const data = await res.json();
 
+  // For now, returning an empty props object
+  return {
+    props: {}, // Will be passed to the page component as props
+  };
+}
 
 const AboutUs = () => {
   return (
@@ -19,7 +30,7 @@ const AboutUs = () => {
       <OurStory />
       <FeatureImgContentTwo />
       <OurTeam />
-      <TestimonialTwo dark={true} bgWhite={false}/>
+      <TestimonialTwo dark={true} bgWhite={false} />
       <ContactForm />
       <Footer footerLight />
     </Layout>

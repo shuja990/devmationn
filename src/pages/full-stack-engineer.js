@@ -9,9 +9,9 @@ import CareerSingleHeader from '@components/career/CareerSingleHeader';
 import ContactForm from '@components/contact-us/ContactForm';
 
 const data = {
-  "title": "Full Stack Developer",
-  "desc": "Join our innovative development team as a Full Stack Developer where you'll play a crucial role in building and enhancing our web applications using the MERN stack. This position requires a driven individual with a strong technical background and a passion for developing scalable web solutions.",
-  "responsibilities": [
+  title: "Full Stack Developer",
+  desc: "Join our innovative development team as a Full Stack Developer where you'll play a crucial role in building and enhancing our web applications using the MERN stack. This position requires a driven individual with a strong technical background and a passion for developing scalable web solutions.",
+  responsibilities: [
     "Design, develop, and maintain web applications using the MERN stack (MongoDB, Express.js, React.js, and Node.js).",
     "Collaborate with cross-functional teams to define, design, and ship new features.",
     "Ensure the performance, quality, and responsiveness of applications.",
@@ -19,7 +19,7 @@ const data = {
     "Help maintain code quality, organization, and automatization.",
     "Participate in code reviews and team meetings, and contribute to team and organizational improvements."
   ],
-  "requirements": [
+  requirements: [
     "Bachelor’s degree in Computer Science, Information Technology, or related field.",
     "Minimum of 3 years' experience as a Full Stack Developer using the MERN stack.",
     "Strong understanding of JavaScript, including DOM manipulation and the JavaScript object model.",
@@ -34,7 +34,7 @@ const data = {
     "Ability to understand business requirements and translate them into technical requirements.",
     "A knack for benchmarking and optimization."
   ],
-  "skills": [
+  skills: [
     "Proven ability in Full Stack development with a focus on the MERN stack.",
     "Strong proficiency in JavaScript, including DOM manipulation and the JavaScript object model.",
     "Excellent problem-solving skills.",
@@ -44,15 +44,26 @@ const data = {
     "Ability to manage multiple projects simultaneously and meet deadlines.",
     "Highly self-motivated and directed."
   ]
+};
+
+export async function getServerSideProps() {
+  // Return the predefined data
+  return {
+    props: { data }
+  };
 }
 
-
-const CareerSingle = () => {
+const CareerSingle = ({ data }) => {
   return (
-    <Layout title={data.title} >
+    <Layout title={data.title}>
       <Navbar classOption="navbar-light" />
       <CareerSingleHeader title={data.title} />
-      <JobDetails desc={data.desc} skills={data.skills} responsibilities={data.responsibilities} requirements={data.requirements} />
+      <JobDetails 
+        desc={data.desc} 
+        skills={data.skills} 
+        responsibilities={data.responsibilities} 
+        requirements={data.requirements} 
+      />
       <RelatedJob />
       <ContactForm />
       <Footer footerLight />

@@ -7,7 +7,16 @@ import CareerPromo from '@components/career/CareerPromo';
 import CareerFeature from '@components/career/CareerFeature';
 import ContactForm from '@components/contact-us/ContactForm';
 
+export async function getServerSideProps() {
+  // If there is a need to fetch data dynamically, you can do it here
+  // const res = await fetch('https://api.example.com/data');
+  // const data = await res.json();
 
+  // For now, return an empty props object
+  return {
+    props: {}, // Will be passed to the page component as props
+  };
+}
 
 const Career = () => {
   return (
