@@ -9,6 +9,7 @@ import WorkProcessTwo from '@components/workprocess/WorkProcessTwo';
 import HeroSectionFourth from '@components/hero-section/HeroSectionFourth';
 import ContactForm from '@components/contact-us/ContactForm';
 import SingleServicePromo from '@components/services/SingleServicePromo';
+import PortfolioTab from '../components/tabs/PortfolioTab';
 
 const data = {
   header: {
@@ -64,6 +65,9 @@ const SassCompanyTwoHome = ({ data }) => {
     <Layout>
       <Navbar />
       <HeroSectionFourth />
+      <PortfolioTab/>
+      <ServiceOne />
+      {/* <WorkProcessTwo /> */}
       <SingleServicePromo
         title={data.section3.title}
         desc={data.section3.desc}
@@ -71,8 +75,6 @@ const SassCompanyTwoHome = ({ data }) => {
         card2={data.section3.card2}
         card3={data.section3.card3}
       />
-      <ServiceOne />
-      <WorkProcessTwo />
       <IntegrationOne />
       <TestimonialOne darkBg />
       <ContactForm />

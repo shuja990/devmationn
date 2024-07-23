@@ -3564,6 +3564,7 @@ li.setup-process-item:not(:last-child):before {
   font-family: var(--bs-font-monospace);
 }
 .avatar-name {
+  color: var(--bs-primary) !important;
   font-size: 15px;
 }
 .avatar-info span {

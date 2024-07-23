@@ -37,7 +37,7 @@ const TestimonialOne = ({ darkBg }) => {
                   role="tabpanel"
                 >
                   <div className="row align-items-center justify-content-between">
-                    <div className="col-lg-6 col-md-6">
+                    <div className="col-lg-12 col-md-12">
                       <div className="testimonial-tab-content mb-5 mb-lg-0 mb-md-0">
                         <Image
                           width={65}
@@ -59,23 +59,6 @@ const TestimonialOne = ({ darkBg }) => {
                         <div className="author-info mt-4">
                           <h6 className="mb-0">{testimonial.name} </h6>
                           <span> {testimonial.title} </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-5 col-md-6">
-                      <div className="author-img-wrap pt-5 ps-5">
-                        <div className="testimonial-video-wrapper position-relative">
-                          <Image
-                            width={478}
-                            height={382}
-                            src={testimonial.image}
-                            className="img-fluid rounded-custom shadow-lg"
-                            alt="testimonial author"
-                          />
-                          <div className="customer-info text-white d-flex align-items-center">
-                            <VideoModal />
-                          </div>
-                          <div className="position-absolute bg-primary-dark z--1 dot-mask dm-size-16 dm-wh-350 top--40 left--40 top-left"></div>
                         </div>
                       </div>
                     </div>
@@ -101,7 +84,7 @@ const TestimonialOne = ({ darkBg }) => {
                     role="tab"
                     aria-selected="false"
                   >
-                    <div className="testimonial-thumb me-3">
+                    {/* <div className="testimonial-thumb me-3">
                       <Image
                         width={50}
                         height={50}
@@ -109,7 +92,7 @@ const TestimonialOne = ({ darkBg }) => {
                         className="rounded-circle"
                         alt="testimonial thumb"
                       />
-                    </div>
+                    </div> */}
                     <div className="author-info">
                       <h6 className="mb-0">{author.name} </h6>
                       <span>{author.title} </span>

@@ -8,6 +8,8 @@ import SingleServiceFeature from '@components/services/SingleServiceFeature';
 import SingleServiceFeatureTwo from '@components/services/SingleServiceFeatureTwo';
 import OurOffice from '@components/our-office/OurOffice';
 import ContactForm from '@components/contact-us/ContactForm';
+import CryptoBlog from '@components/blogs/CryptoBlog';
+import LatestBlog from '@components/blogs/LatestBlog';
 
 const data = {
     header: {
@@ -73,10 +75,11 @@ const SingleService = ({ data }) => {
                 desc={data.section1.desc}
                 image={data.section1.image}
             />
-            <OurOffice
+            {/* <OurOffice
                 title={data.projects.title}
                 desc={data.projects.desc}
-            />
+            /> */}
+            <LatestBlog/>
             <SingleServiceFeatureTwo
                 title={data.section2.title}
                 desc={data.section2.desc}

@@ -4,7 +4,7 @@ import React from "react";
 
 const PortfolioTab = () => {
   return (
-    <section className="portfolio bg-light ptb-120">
+    <section className="portfolio bg-dark ptb-120">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-6 col-md-10">
@@ -18,7 +18,7 @@ const PortfolioTab = () => {
           </div>
         </div>
         <div className="row justify-content-center">
-          <div className="col-lg-4 col-md-6">
+          <div className="col-lg-12 col-md-12">
             <div className="tab-button mb-5">
               <ul
                 className="nav nav-pills d-flex justify-content-center"
@@ -99,7 +99,7 @@ const PortfolioTab = () => {
             </div>
           </div>
 
-          <div className="tab-content" id="pills-tabContent">
+          <div className="tab-content" id="pills-tabContent" >
             <div
               className="tab-pane fade show active"
               id="pills-all"
@@ -107,395 +107,29 @@ const PortfolioTab = () => {
               aria-labelledby="pills-all-tab"
             >
               <div className="row">
-                <div className="col-lg-4">
-                  <div className="single-portfolio-item mb-30">
-                    <div className="portfolio-item-Image">
-                      <Image
-                        src="/portfolio/portfolio1.jpg"
-                        alt="portfolio"
-                        width={416}
-                        height={385}
-                        className="Image-fluid"
-                      />
-                      <div className="portfolio-info">
-                        <div className="categories">
-                          <span>Design,</span>
-                          <span>Web</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-4">
-                  <div className="single-portfolio-item mb-30">
-                    <div className="portfolio-item-Image">
-                      <Image
-                        src="/portfolio/portfolio2.jpg"
-                        alt="portfolio "
-                        className="Image-fluid"
-                        width={416}
-                        height={385}
-                      />
-                      <div className="portfolio-info">
-                        <div className="categories">
-                          <span>Branding,</span>
-                          <span>Logo</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-4">
-                  <div className="single-portfolio-item mb-30">
-                    <div className="portfolio-item-Image">
-                      <Image
-                        src="/portfolio/portfolio3.jpg"
-                        alt="portfolio "
-                        className="Image-fluid"
-                        width={416}
-                        height={385}
-                      />
-                      <div className="portfolio-info">
-                        
-                        <div className="categories">
-                          <span>Branding,</span>
-                          <span>Logo</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-4">
-                  <div className="single-portfolio-item mb-30">
-                    <div className="portfolio-item-Image">
-                      <Image
-                        src="/portfolio/portfolio4.jpg"
-                        alt="portfolio "
-                        className="Image-fluid"
-                        width={416}
-                        height={385}
-                      />
-                      <div className="portfolio-info">
-                       
-                        <div className="categories">
-                          <span>Design</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-4">
-                  <div className="single-portfolio-item mb-30">
-                    <div className="portfolio-item-Image">
-                      <Image
-                        src="/portfolio/portfolio5.jpg"
-                        alt="portfolio "
-                        className="Image-fluid"
-                        width={416}
-                        height={385}
-                      />
-                      <div className="portfolio-info">
-                        
-                        <div className="categories">
-                          <span>Branding,</span>
-                          <span>Logo</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-4">
-                  <div className="single-portfolio-item mb-30">
-                    <div className="portfolio-item-Image">
-                      <Image
-                        src="/portfolio/portfolio6.jpg"
-                        alt="portfolio "
-                        className="Image-fluid"
-                        width={416}
-                        height={385}
-                      />
-                      <div className="portfolio-info">
-                        
-                        <div className="categories">
-                          <span>Branding,</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                {[0, 1, 2, 3].map((project, id) => (
 
-            <div
-              className="tab-pane fade"
-              id="pills-branding"
-              role="tabpanel"
-              aria-labelledby="pills-branding-tab"
-            >
-              <div className="row">
-                <div className="col-lg-4">
-                  <div className="single-portfolio-item mb-30">
-                    <div className="portfolio-item-Image">
-                      <Image
-                        src="/portfolio/portfolio2.jpg"
-                        alt="portfolio "
-                        className="Image-fluid"
-                        width={416}
-                        height={385}
-                      />
-                      <div className="portfolio-info">
-                        
-                        <div className="categories">
-                          <span>Branding,</span>
-                          <span>Logo</span>
-                        </div>
+                  <div className="col-lg-6" key={id}>
+                    <div className="single-portfolio-item mb-30">
+                      <div className="portfolio-item-Image">
+                        <Image
+                          src="/portfolio/portfolio1.jpg"
+                          alt="portfolio"
+                          width={616}
+                          height={385}
+                          className="Image-fluid"
+                        />
+                        <h2>Banking</h2>
+                        <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div className="col-lg-4">
-                  <div className="single-portfolio-item mb-30">
-                    <div className="portfolio-item-Image">
-                      <Image
-                        src="/portfolio/portfolio3.jpg"
-                        alt="portfolio "
-                        className="Image-fluid"
-                        width={416}
-                        height={385}
-                      />
-                      <div className="portfolio-info">
-                        
-                        <div className="categories">
-                          <span>Branding,</span>
-                          <span>Logo</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-4">
-                  <div className="single-portfolio-item mb-30">
-                    <div className="portfolio-item-Image">
-                      <Image
-                        src="/portfolio/portfolio4.jpg"
-                        alt="portfolio "
-                        className="Image-fluid"
-                        width={416}
-                        height={385}
-                      />
-                      <div className="portfolio-info">
-                        
-                        <div className="categories">
-                          <span>Design</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                ))}
 
-            <div
-              className="tab-pane fade"
-              id="pills-design"
-              role="tabpanel"
-              aria-labelledby="pills-design-tab"
-            >
-              <div className="row">
-                <div className="col-lg-4">
-                  <div className="single-portfolio-item mb-30">
-                    <div className="portfolio-item-Image">
-                      <Image
-                        src="/portfolio/portfolio1.jpg"
-                        alt="portfolio "
-                        className="Image-fluid"
-                        width={416}
-                        height={385}
-                      />
-                      <div className="portfolio-info">
-                      
-                        <div className="categories">
-                          <span>Design,</span>
-                          <span>Web</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-4">
-                  <div className="single-portfolio-item mb-30">
-                    <div className="portfolio-item-Image">
-                      <Image
-                        src="/portfolio/portfolio5.jpg"
-                        alt="portfolio "
-                        className="Image-fluid"
-                        width={416}
-                        height={385}
-                      />
-                      <div className="portfolio-info">
-                        <div className="categories">
-                          <span>Branding,</span>
-                          <span>Logo</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-4">
-                  <div className="single-portfolio-item mb-30">
-                    <div className="portfolio-item-Image">
-                      <Image
-                        src="/portfolio/portfolio6.jpg"
-                        alt="portfolio "
-                        className="Image-fluid"
-                        width={416}
-                        height={385}
-                      />
-                      <div className="portfolio-info">
-                        <div className="categories">
-                          <span>Branding,</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="tab-pane fade"
-              id="pills-logo"
-              role="tabpanel"
-              aria-labelledby="pills-logo-tab"
-            >
-              <div className="row">
-                <div className="col-lg-4">
-                  <div className="single-portfolio-item mb-30">
-                    <div className="portfolio-item-Image">
-                      <Image
-                        src="/portfolio/portfolio1.jpg"
-                        alt="portfolio "
-                        className="Image-fluid"
-                        width={416}
-                        height={385}
-                      />
-                      <div className="portfolio-info">
-                        <div className="categories">
-                          <span>Design,</span>
-                          <span>Web</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-4">
-                  <div className="single-portfolio-item mb-30">
-                    <div className="portfolio-item-Image">
-                      <Image
-                        src="/portfolio/portfolio2.jpg"
-                        alt="portfolio "
-                        className="Image-fluid"
-                        width={416}
-                        height={385}
-                      />
-                      <div className="portfolio-info">
-                        <div className="categories">
-                          <span>Branding,</span>
-                          <span>Logo</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-4">
-                  <div className="single-portfolio-item mb-30">
-                    <div className="portfolio-item-Image">
-                      <Image
-                        src="/portfolio/portfolio3.jpg"
-                        alt="portfolio "
-                        className="Image-fluid"
-                        width={416}
-                        height={385}
-                      />
-                      <div className="portfolio-info">
-                        <div className="categories">
-                          <span>Branding,</span>
-                          <span>Logo</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="tab-pane fade"
-              id="pills-web"
-              role="tabpanel"
-              aria-labelledby="pills-web-tab"
-            >
-              <div className="row">
-                <div className="col-lg-4">
-                  <div className="single-portfolio-item mb-30">
-                    <div className="portfolio-item-Image">
-                      <Image
-                        src="/portfolio/portfolio1.jpg"
-                        alt="portfolio "
-                        className="Image-fluid"
-                        width={416}
-                        height={385}
-                      />
-                      <div className="portfolio-info">
-                        <div className="categories">
-                          <span>Design,</span>
-                          <span>Web</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-4">
-                  <div className="single-portfolio-item mb-30">
-                    <div className="portfolio-item-Image">
-                      <Image
-                        src="/portfolio/portfolio5.jpg"
-                        alt="portfolio "
-                        className="Image-fluid"
-                        width={416}
-                        height={385}
-                      />
-                      <div className="portfolio-info">
-                        <div className="categories">
-                          <span>Branding,</span>
-                          <span>Logo</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-4">
-                  <div className="single-portfolio-item mb-30">
-                    <div className="portfolio-item-Image">
-                      <Image
-                        src="/portfolio/portfolio2.jpg"
-                        alt="portfolio "
-                        className="Image-fluid"
-                        width={416}
-                        height={385}
-                      />
-                      <div className="portfolio-info">
-                        <div className="categories">
-                          <span>Branding,</span>
-                          <span>Logo</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
