@@ -1,3 +1,4 @@
+import PortfolioCarousel from "@components/portfolio/PortfolioCarousel";
 import Image from "next/image";
 import React from "react";
 
@@ -18,7 +19,7 @@ const PortfolioTab = () => {
           </div>
         </div>
         <div className="row justify-content-center">
-          <div className="col-lg-12 col-md-12">
+          {/* <div className="col-lg-12 col-md-12">
             <div className="tab-button mb-5">
               <ul
                 className="nav nav-pills d-flex justify-content-center"
@@ -97,37 +98,40 @@ const PortfolioTab = () => {
                 </li>
               </ul>
             </div>
-          </div>
+          </div> */}
 
-          <div className="tab-content" id="pills-tabContent" >
+          {/* <div className="tab-content" id="pills-tabContent" >
             <div
               className="tab-pane fade show active"
               id="pills-all"
               role="tabpanel"
               aria-labelledby="pills-all-tab"
-            >
+            > */}
               <div className="row">
-                {[0, 1, 2, 3].map((project, id) => (
+                {['Website','Web App','Mobile App', 'AI/ML'].map((project, id) => (
+                  // <a key={id} href="https://www.devmations.com" target="_blank" rel="noopener noreferrer" className="col-lg-6 col-md-6">
+                  //   <div className="" >
+                  //     <div className="single-portfolio-item mb-30">
+                  //       <div className="portfolio-item-Image">
+                  //         <Image
+                  //           src="/portfolio/portfolio1.jpg"
+                  //           alt="portfolio"
+                  //           width={616}
+                  //           height={385}
+                  //           className="Image-fluid"
+                  //         />
+                  //         <h2 className="h2 article-title limit-2-line-text">Banking</h2>
+                  //         <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+                  //       </div>
+                  //     </div>
+                  //   </div>
+                  // </a>
+                  <PortfolioCarousel key={id} title={project}/>
 
-                  <div className="col-lg-6" key={id}>
-                    <div className="single-portfolio-item mb-30">
-                      <div className="portfolio-item-Image">
-                        <Image
-                          src="/portfolio/portfolio1.jpg"
-                          alt="portfolio"
-                          width={616}
-                          height={385}
-                          className="Image-fluid"
-                        />
-                        <h2>Banking</h2>
-                        <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
-                      </div>
-                    </div>
-                  </div>
                 ))}
 
-              </div>
-            </div>
+              {/* </div>
+            </div> */}
           </div>
 
         </div>
