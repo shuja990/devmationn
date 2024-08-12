@@ -6,7 +6,7 @@ const portfolioItems = [
     {
         title: 'Project One',
         description: 'Description for project one.',
-        image: '/portfolio.png',
+        image: '/sample.png',
         link: 'https://example.com/project-one',
     },
     {
@@ -18,7 +18,7 @@ const portfolioItems = [
     {
         title: 'Project Three',
         description: 'Description for project three.',
-        image: '/portfolio.png',
+        image: '/sample.png',
         link: 'https://example.com/project-three',
     },
     {
