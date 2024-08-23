@@ -6,25 +6,25 @@ const portfolioItems = [
     {
         title: 'Project One',
         description: 'Description for project one.',
-        image: '/sample.png',
+        image: '/portfolio/320.png',
         link: 'https://example.com/project-one',
     },
     {
         title: 'Project Two',
         description: 'Description for project two.',
-        image: '/portfolio.png',
+        image: '/portfolio/260.png',
         link: 'https://example.com/project-two',
     },
     {
         title: 'Project Three',
         description: 'Description for project three.',
-        image: '/sample.png',
+        image: '/portfolio/240.png',
         link: 'https://example.com/project-three',
     },
     {
         title: 'Project Four',
         description: 'Description for project four.',
-        image: '/portfolio.png',
+        image: '/portfolio/200.png',
         link: 'https://example.com/project-four',
     },
 ];
