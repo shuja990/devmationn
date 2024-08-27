@@ -1,9 +1,36 @@
-import PortfolioCarousel from "@components/portfolio/PortfolioCarousel";
+import PortfolioCard from "@components/portfolio/PortfolioCard";
 import Image from "next/image";
 import React from "react";
 
 
 const PortfolioTab = () => {
+  const portfolioData = [
+    {
+      title: "E-Commerce Platform",
+      description: "A full-fledged e-commerce solution with integrated payment gateways and user-friendly interfaces.",
+      image: "https://via.placeholder.com/400x370", // Replace with actual image URL
+      link: "#",
+    },
+    {
+      title: "Mobile Banking App",
+      description: "A secure and responsive mobile banking app with real-time transaction tracking and notifications.",
+      image: "https://via.placeholder.com/400x370", // Replace with actual image URL
+      link: "#",
+    },
+    {
+      title: "AI-Powered Analytics",
+      description: "An AI-based analytics tool that helps businesses derive actionable insights from their data.",
+      image: "https://via.placeholder.com/400x370", // Replace with actual image URL
+      link: "#",
+    },
+    {
+      title: "Social Media Dashboard",
+      description: "A dashboard for managing multiple social media accounts, scheduling posts, and tracking performance metrics.",
+      image: "https://via.placeholder.com/400x370", // Replace with actual image URL
+      link: "#",
+    },
+  ];
+
   return (
     <section className="portfolio bg-dark ptb-120">
       <div className="container">
@@ -19,7 +46,7 @@ const PortfolioTab = () => {
           </div>
         </div>
         <div className="row justify-content-center">
-          {/* <div className="col-lg-12 col-md-12">
+          <div className="col-lg-12 col-md-12">
             <div className="tab-button mb-5">
               <ul
                 className="nav nav-pills d-flex justify-content-center"
@@ -98,40 +125,28 @@ const PortfolioTab = () => {
                 </li>
               </ul>
             </div>
-          </div> */}
+          </div>
 
-          {/* <div className="tab-content" id="pills-tabContent" >
+          <div className="tab-content" id="pills-tabContent" >
             <div
               className="tab-pane fade show active"
               id="pills-all"
               role="tabpanel"
               aria-labelledby="pills-all-tab"
-            > */}
-              <div className="row">
-                {['Website','Web App','Mobile App', 'AI/ML'].map((project, id) => (
-                  // <a key={id} href="https://www.devmations.com" target="_blank" rel="noopener noreferrer" className="col-lg-6 col-md-6">
-                  //   <div className="" >
-                  //     <div className="single-portfolio-item mb-30">
-                  //       <div className="portfolio-item-Image">
-                  //         <Image
-                  //           src="/portfolio/portfolio1.jpg"
-                  //           alt="portfolio"
-                  //           width={616}
-                  //           height={385}
-                  //           className="Image-fluid"
-                  //         />
-                  //         <h2 className="h2 article-title limit-2-line-text">Banking</h2>
-                  //         <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
-                  //       </div>
-                  //     </div>
-                  //   </div>
-                  // </a>
-                  <PortfolioCarousel key={id} title={project}/>
-
+            >
+              <div className="" style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
+                {portfolioData.map((project, id) => (
+                  <PortfolioCard
+                    key={id}
+                    title={project.title}
+                    description={project.description}
+                    image={project.image}
+                    link={project.link}
+                  />
                 ))}
 
-              {/* </div>
-            </div> */}
+              </div>
+            </div>
           </div>
 
         </div>
