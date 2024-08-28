@@ -8,25 +8,25 @@ const PortfolioTab = () => {
     {
       title: "E-Commerce Platform",
       description: "A full-fledged e-commerce solution with integrated payment gateways and user-friendly interfaces.",
-      image: "https://via.placeholder.com/400x370", // Replace with actual image URL
+      image: "/portfolio/portfolio1.png", // Replace with actual image URL
       link: "#",
     },
     {
       title: "Mobile Banking App",
       description: "A secure and responsive mobile banking app with real-time transaction tracking and notifications.",
-      image: "https://via.placeholder.com/400x370", // Replace with actual image URL
+      image: "/portfolio/portfolio1.png", // Replace with actual image URL
       link: "#",
     },
     {
       title: "AI-Powered Analytics",
       description: "An AI-based analytics tool that helps businesses derive actionable insights from their data.",
-      image: "https://via.placeholder.com/400x370", // Replace with actual image URL
+      image: "/portfolio/portfolio2.png", // Replace with actual image URL
       link: "#",
     },
     {
       title: "Social Media Dashboard",
       description: "A dashboard for managing multiple social media accounts, scheduling posts, and tracking performance metrics.",
-      image: "https://via.placeholder.com/400x370", // Replace with actual image URL
+      image: "/portfolio/portfolio2.png", // Replace with actual image URL
       link: "#",
     },
   ];
@@ -134,7 +134,7 @@ const PortfolioTab = () => {
               role="tabpanel"
               aria-labelledby="pills-all-tab"
             >
-              <div className="" style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
+              <div className="" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
                 {portfolioData.map((project, id) => (
                   <PortfolioCard
                     key={id}
