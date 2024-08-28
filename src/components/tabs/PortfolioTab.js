@@ -134,7 +134,7 @@ const PortfolioTab = () => {
               role="tabpanel"
               aria-labelledby="pills-all-tab"
             >
-              <div className="" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
+              <div className="portfolio-listing-home">
                 {portfolioData.map((project, id) => (
                   <PortfolioCard
                     key={id}
