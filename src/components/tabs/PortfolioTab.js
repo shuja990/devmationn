@@ -14,7 +14,7 @@ const PortfolioTab = () => {
     {
       title: "Mobile Banking App",
       description: "A secure and responsive mobile banking app with real-time transaction tracking and notifications.",
-      image: "/portfolio/portfolio1.png", // Replace with actual image URL
+      image: "/portfolio/portfolio3.png", // Replace with actual image URL
       link: "#",
     },
     {
