@@ -7,15 +7,15 @@ const PortfolioCard = ({ title, description, image, link }) => {
         <img src={image} alt={title} />
       </div>
       <div className="card-content">
-        <h3 className="card-title">{title}</h3>
-        <p className="card-description">{description}</p>
+        <h3 className="card-title text-start">{title}</h3>
+        <p className="card-description text-start">{description}</p>
         <a
           href={link}
-          className="card-link"
+          className="btn btn-primary"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn More
+          Explore 
         </a>
       </div>
     </div>

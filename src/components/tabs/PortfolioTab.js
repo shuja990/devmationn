@@ -6,8 +6,8 @@ import React from "react";
 const PortfolioTab = () => {
   const portfolioData = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-fledged e-commerce solution with integrated payment gateways and user-friendly interfaces.",
+      title: "SecureBank: Your Financial Command Center",
+      description: "Connect multiple accounts, track real-time balances and transactions, and transfer funds securely with SecureBank. Our intuitive dashboard and Plaid integration offer seamless financial management for businesses and individuals.",
       image: "/portfolio/portfolio1.png", // Replace with actual image URL
       link: "#",
     },
