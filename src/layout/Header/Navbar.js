@@ -38,17 +38,17 @@ const Navbar = ({ navDark, classOption }) => {
             <a className="navbar-brand d-flex align-items-center mb-md-0 text-decoration-none">
               {scroll > headerTop || !navDark ? (
                 <Image
-                  width={213}
-                  height={46}
-                  src="/logo.png"
+                  width={250}
+                  height={37}
+                  src="/devmations-logo.png"
                   alt="logo"
                   className="img-fluid logo-color"
                 />
               ) : (
                 <Image
-                  width={213}
-                  height={46}
-                  src="/logo.png"
+                  width={250}
+                  height={37}
+                  src="/devmations-logo.png"
                   alt="logo"
                   className="img-fluid logo-white"
                 />
