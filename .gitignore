@@ -80,3 +80,6 @@ Thumbs.db
 
 # Next.js typegen
 next-env.d.ts
+
+# TypeScript incremental build cache
+*.tsbuildinfo
