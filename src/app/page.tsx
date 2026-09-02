@@ -8,6 +8,7 @@ import { EvalScorecard } from '@/components/blocks/EvalScorecard';
 import { TerminalBlock } from '@/components/blocks/TerminalBlock';
 import { AgentFlow } from '@/components/blocks/AgentFlow';
 import { Reveal } from '@/components/blocks/Reveal';
+import { ShippedStrip } from '@/components/blocks/ShippedStrip';
 import { ServiceIcon } from '@/components/brand/ServiceIcon';
 import { JsonLd } from '@/components/JsonLd';
 import { faqSchema } from '@/lib/schema';
@@ -137,6 +138,8 @@ export default function HomePage() {
               <AgentWorkflow />
             </Reveal>
           </div>
+
+          <ShippedStrip className="pb-16" />
         </Container>
       </section>
 
