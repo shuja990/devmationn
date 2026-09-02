@@ -71,3 +71,12 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# Next.js typegen
+next-env.d.ts

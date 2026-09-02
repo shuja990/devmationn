@@ -1,0 +1,236 @@
+@import 'tailwindcss';
+
+/* ==========================================================================
+   DevMations design tokens
+   Dark-first. Every colour is a CSS custom property so the theme can flip
+   without touching a single utility class.
+
+   The one hard rule: pass/fail/warn are SEMANTIC. Green means "passing",
+   red means "failing". They are never used decoratively. That constraint is
+   why the brand accent is violet rather than the blue or green every other
+   AI agency lands on -- the site is full of eval scorecards, and a
+   decorative green would make a real pass rate unreadable.
+   ========================================================================== */
+
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-subtle: var(--ink-subtle);
+
+  --color-brand: var(--brand);
+  --color-brand-tint: var(--brand-tint);
+  --color-brand-deep: var(--brand-deep);
+  --color-warm: var(--warm);
+
+  --color-pass: var(--pass);
+  --color-fail: var(--fail);
+  --color-warn: var(--warn);
+
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, monospace;
+
+  --radius-card: 0.875rem;
+  --radius-pill: 999px;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root {
+  color-scheme: dark;
+
+  --canvas: #08090d;
+  --surface: #0e1017;
+  --surface-2: #14171f;
+  --surface-3: #1a1e28;
+
+  --line: #1c2029;
+  --line-strong: #2a2f3c;
+
+  --ink: #f4f5f7;
+  --ink-muted: #a0a5b1;
+  --ink-subtle: #6b7280;
+
+  --brand: #7c5cff;
+  --brand-tint: #a594ff;
+  --brand-deep: #5b3fe0;
+  --warm: #ff8a3d;
+
+  --pass: #34d399;
+  --fail: #fb7185;
+  --warn: #fbbf24;
+
+  --glow: color-mix(in oklab, var(--brand) 22%, transparent);
+}
+
+.light {
+  color-scheme: light;
+
+  --canvas: #ffffff;
+  --surface: #f7f8fa;
+  --surface-2: #f0f2f5;
+  --surface-3: #e8ebf0;
+
+  --line: #e2e5eb;
+  --line-strong: #cbd0da;
+
+  --ink: #0b0d14;
+  --ink-muted: #4a5262;
+  --ink-subtle: #717a8c;
+
+  --brand: #5b3fe0;
+  --brand-tint: #7c5cff;
+  --brand-deep: #4930b8;
+  --warm: #d95f16;
+
+  --pass: #059669;
+  --fail: #e11d48;
+  --warn: #b45309;
+
+  --glow: color-mix(in oklab, var(--brand) 12%, transparent);
+}
+
+/* --------------------------------------------------------------------------
+   Base
+   -------------------------------------------------------------------------- */
+
+@layer base {
+  * {
+    border-color: var(--line);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--canvas);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+    color: var(--ink);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--brand) 32%, transparent);
+    color: var(--ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--brand-tint);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Respect the user's motion preference everywhere, including the
+     motion library's inline styles. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Utilities
+   -------------------------------------------------------------------------- */
+
+@utility text-gradient {
+  background: linear-gradient(
+    100deg,
+    var(--ink) 0%,
+    var(--ink) 40%,
+    var(--brand-tint) 78%,
+    var(--warm) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Faint technical grid, used behind heroes and feature bands. */
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, var(--line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--line) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+@utility bg-glow {
+  background: radial-gradient(60% 60% at 50% 0%, var(--glow) 0%, transparent 70%);
+}
+
+/* Hairline border that survives both themes without a wrapper element. */
+@utility ring-line {
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+/* --------------------------------------------------------------------------
+   Scroll reveal
+
+   CSS-only, and deliberately so. The previous implementation used a
+   JavaScript IntersectionObserver with an initial opacity of 0, which meant
+   that without JavaScript the content never became visible at all -- verified
+   at opacity 0 in a JS-disabled browser. For a site that must be readable by
+   crawlers and answer engines, content may never depend on JS to be seen.
+
+   It animates TRANSFORM ONLY -- never opacity. A view-timeline animation with
+   `both` fill sits at its from-state before the element enters range, so
+   animating opacity meant content was invisible to page captures, printing,
+   and PDF export. Sliding 14px cannot hide anything: the worst case is text
+   that is slightly offset and perfectly readable.
+   -------------------------------------------------------------------------- */
+
+@keyframes reveal-in {
+  from {
+    transform: translateY(14px);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: reveal-in linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 50%;
+    }
+  }
+}

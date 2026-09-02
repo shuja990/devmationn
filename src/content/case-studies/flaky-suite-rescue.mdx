@@ -1,0 +1,111 @@
+---
+title: 'A test suite nobody trusted, made trustworthy again'
+client: 'PLACEHOLDER — marketplace platform'
+description: 'Forty minutes to run, failing at random one time in five, and universally ignored. We fixed the cause rather than the symptom.'
+date: '2026-04-02'
+service: 'automation-testing'
+industry: 'Business Tools'
+stack: ['Playwright', 'TypeScript', 'GitHub Actions', 'Docker']
+results:
+  - label: 'Suite runtime'
+    value: '41 min → 7 min'
+  - label: 'Random failures'
+    value: '19% → 0.4%'
+  - label: 'Tests deleted'
+    value: '84'
+  - label: 'Bugs caught pre-release'
+    value: 'Up 3×'
+draft: false
+---
+
+> **Placeholder case study.** The approach is real and reusable; the client and the
+> numbers are invented and must be replaced before this page goes live. See
+> `CONTENT-TODO.md`.
+
+## The situation
+
+Around 600 end-to-end tests, forty-one minutes to run, and a failure roughly one run in
+five that had nothing to do with the code being tested.
+
+The team had adapted in the way every team does: they re-ran it. A red build meant "run
+it again", not "something is wrong". At that point the suite had stopped being a safety
+net and become a toll booth — and real regressions were sailing straight through,
+because a genuine failure looked exactly like the noise.
+
+## Measuring the noise
+
+We ran the full suite thirty times against an unchanged codebase. Anything that failed
+even once was, by definition, failing for a reason unrelated to the code.
+
+The distribution was the useful part:
+
+<TerminalBlock
+  label="flake analysis · 30 runs, unchanged code"
+  lines={[
+    { text: 'npx flake-report --runs 30', prompt: true },
+    { text: '' },
+    { text: '  612 tests total', tone: 'muted' },
+    { text: '  528 stable across all runs', tone: 'pass' },
+    { text: '   84 failed at least once', tone: 'fail' },
+    { text: '' },
+    { text: '  top offenders account for 71% of all failures:', tone: 'muted' },
+    { text: '    checkout/payment-retry.spec.ts        22/30 runs', tone: 'fail' },
+    { text: '    search/filters-persist.spec.ts        17/30 runs', tone: 'fail' },
+    { text: '    account/notification-prefs.spec.ts    14/30 runs', tone: 'fail' },
+    { text: '    listing/bulk-upload.spec.ts           11/30 runs', tone: 'warn' },
+  ]}
+/>
+
+Fourteen per cent of the tests were producing all of the pain. That is the usual shape,
+and it is good news: this is a small, finishable job rather than a rewrite.
+
+## Three causes, not eighty-four problems
+
+Reading the offenders, nearly all of them traced to three root causes:
+
+**Waiting on time instead of on state.** Tests paused for a fixed number of milliseconds
+and hoped the app had caught up. On a loaded CI machine, sometimes it had not. Replaced
+with waits on the actual condition.
+
+**Tests sharing data.** Several tests used the same seeded account and interfered with
+each other depending on execution order — which changes when tests run in parallel.
+Every test now creates and tears down its own data.
+
+**Asserting on things that legitimately vary.** A handful checked exact timestamps and
+list ordering that was never guaranteed. Those assertions were simply wrong, and had been
+producing failures that everyone had learned to ignore.
+
+We deleted eleven tests outright. Each was either duplicating coverage that existed at a
+faster layer, or testing something that no longer mattered. A test nobody would fix if it
+broke is not an asset.
+
+## Making it fast
+
+Trustworthy was the goal; fast was what made people actually use it.
+
+- Sharded across eight parallel CI workers
+- Browser binaries and dependencies cached between runs
+- Authentication done once and the session reused, instead of logging in through the UI
+  in every single test
+- The slowest 5% profiled individually — two were waiting on a third-party sandbox that
+  could be stubbed
+
+Forty-one minutes became seven.
+
+## What actually changed
+
+Runtime and flake rate were the visible numbers, but the one that mattered was that
+**the team started reading the results again.**
+
+A seven-minute suite that is right 99.6% of the time is something engineers wait for. A
+forty-one-minute suite that lies one time in five is something they route around. Same
+tests, mostly — completely different relationship with them.
+
+Three times as many genuine regressions were caught before release in the following
+quarter. Not because coverage went up much, but because failures stopped being ignored.
+
+## What we would flag
+
+Flake is not a fixed state. Without something watching it, the rate climbs back as new
+tests arrive carrying the same habits. We left a flake report running weekly and a
+written standard for the team, but that only works if somebody keeps looking at it.

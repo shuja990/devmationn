@@ -1,0 +1,83 @@
+---
+title: 'Your AI is not lying to you. It is reading the wrong page.'
+description: 'Most wrong answers from an AI built on your own documents are not a model problem. They are a search problem, and the fix is usually unglamorous.'
+date: '2026-07-14'
+tags: ['RAG', 'Evals', 'Retrieval']
+draft: false
+---
+
+When an AI assistant built on a company's own documents gives a wrong answer, the
+instinct is to blame the AI. It made something up. It hallucinated. Time to try a
+different model.
+
+Almost always, that diagnosis is wrong — and acting on it wastes a month.
+
+## The usual cause
+
+These systems work in two steps. First they **search** your documents for passages that
+look relevant. Then they **write** an answer using those passages.
+
+When the answer is wrong, the failure is nearly always in the first step. The AI was
+handed the wrong page and answered it perfectly faithfully. From the outside those two
+failures look identical — a confident, wrong answer — which is exactly why teams keep
+misdiagnosing it.
+
+The tell is easy to check: look at what the system actually retrieved before it answered.
+If the correct information was not in there, no model change will help. You are trying to
+fix a librarian problem with a better writer.
+
+## Why the search goes wrong
+
+**The documents were cut in the wrong places.** To be searchable, your documents get split
+into chunks. Split on a fixed character count — the default nearly everywhere — and you
+routinely cut a policy away from its exceptions. The system then retrieves "returns are
+accepted within 30 days" and never sees "except for personalised items", because that
+sentence landed in a different chunk.
+
+**Meaning-based search is bad at exact terms.** These systems match on similarity of
+meaning, which is excellent for "how do I get a refund" and poor for `ERR_4021` or part
+number `XJ-9920`. Those need old-fashioned keyword search running alongside.
+
+**It retrieves too much.** Teams often send twenty passages to be safe. This makes things
+worse, not better — the relevant passage gets buried among nineteen mediocre ones, and
+you pay for all of them. Fewer, better passages beats more.
+
+## How to tell which one you have
+
+Take twenty questions your system got wrong. For each, look at what it retrieved and ask
+one question: **was the correct information in there?**
+
+- **It was not there** → search problem. Fix the chunking and add keyword search.
+- **It was there but the answer was still wrong** → now you have a genuine writing
+  problem, and prompt or model changes are worth trying.
+
+Most teams doing this exercise for the first time find eighty per cent or more in the
+first category. That is good news: chunking and search are ordinary engineering problems
+with reliable fixes, and they are far cheaper than the model migration they were about to
+attempt.
+
+## The unglamorous fix
+
+In rough order of how often it pays:
+
+1. **Split on meaning, not length.** Sections, headings, paragraphs — boundaries an author
+   put there deliberately.
+2. **Run keyword search alongside meaning-based search** and merge the results. This
+   single change fixes an entire category of failure.
+3. **Retrieve fewer passages,** and measure where the answer actually came from before
+   deciding how many.
+4. **Only then** consider prompts and models.
+
+## The step people skip
+
+You cannot do any of this without measurement, because every change above will feel like
+an improvement whether or not it is one.
+
+Build a set of real questions where you already know the correct answer, and check what
+fraction retrieve the right source. Fifty is plenty to start. Then every change becomes a
+number instead of an argument, and you find out in an afternoon whether re-chunking
+helped rather than shipping it on faith.
+
+That is the whole discipline. It is not sophisticated. It is just rarely done — which is
+why so many AI projects stall between an impressive demo and something anyone will let
+near a customer.

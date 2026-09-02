@@ -1,0 +1,78 @@
+---
+title: 'Fifty test cases is enough to start'
+description: 'Teams delay testing their AI because they think they need thousands of examples. They need about fifty, and they already have them.'
+date: '2026-08-05'
+tags: ['Evals', 'Quality']
+draft: false
+---
+
+The most common reason a team has no testing around their AI is that the job looks too
+big. Thousands of examples, a labelling process, someone to own it. It goes on the
+roadmap and stays there.
+
+The premise is wrong. You need about fifty cases to start being useful, and you already
+have them.
+
+## Where they come from
+
+Not from generating synthetic examples. From the failures you have already had:
+
+- Screenshots of bad answers in your team chat
+- Support tickets where the AI got it wrong
+- The examples your CEO keeps bringing up
+- Whatever a salesperson is nervous about demoing
+
+These are worth more than a thousand generated cases for a straightforward reason:
+**they already happened.** Each one is a failure mode that has occurred in production
+and cost you something. Generated examples test what someone imagined might go wrong.
+
+An afternoon in your support tickets and your team's message history will get you most
+of the way there.
+
+## Why fifty works
+
+Fifty real cases across your genuine failure modes will catch most regressions, because
+regressions cluster. A change that breaks something usually breaks a whole category, and
+you only need a few cases in each category to notice.
+
+Going from fifty to five hundred improves precision — it narrows down *what* broke. It
+does not much change whether you find out that something broke at all. And you get the
+second thing on day one.
+
+## What you actually need
+
+Each case is three things:
+
+1. **The input.** The real question, verbatim, typos included.
+2. **What good looks like.** Not the exact words — the AI will phrase it differently every
+   time. The facts that must be present and the ones that must not.
+3. **A category.** So a failure points at an area rather than just a number.
+
+That is it. A spreadsheet works for the first version. The tooling matters far less than
+the cases.
+
+## The part that is genuinely hard
+
+Not the volume. Agreeing what "good" means.
+
+Have two people on your team grade the same twenty answers independently, then compare.
+First time, most teams agree on roughly two-thirds. The disagreements are almost never
+about facts — they are about how much hedging is acceptable, or whether a partially
+correct answer passes.
+
+That is worth the argument. Until your own people can grade consistently, no score means
+anything, and a machine grader built on an ambiguous standard just produces a confident
+number with noise inside it.
+
+## Then wire it in
+
+The last step is what makes the difference: run it automatically on every change, and
+block anything that lowers the score.
+
+Teams that run evals manually stop within a month — not from laziness, but because
+nothing forces it. Teams whose merge is blocked by a failing suite keep it healthy,
+because it is now in the way of everything they do.
+
+Fifty cases, one afternoon of collection, one morning of arguing about what good means,
+and a check that runs by itself. That is a week's work, and it is the difference between
+shipping AI changes confidently and not shipping them at all.

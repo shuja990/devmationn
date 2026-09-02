@@ -1,0 +1,142 @@
+---
+title: 'Turning an unpredictable support assistant into one the team trusts'
+client: 'PLACEHOLDER — B2B SaaS company'
+description: 'A support assistant was giving confidently wrong answers with no way to tell how often. We built the measurement first, then fixed what it revealed.'
+date: '2026-06-18'
+service: 'ai-evals'
+industry: 'AI & ML'
+stack: ['OpenAI', 'Promptfoo', 'Python', 'GitHub Actions', 'Langfuse']
+results:
+  - label: 'Wrong answers'
+    value: 'Down 71%'
+  - label: 'Cost per conversation'
+    value: 'Down 34%'
+  - label: 'Questions under test'
+    value: '380'
+  - label: 'Time to first score'
+    value: '2 weeks'
+draft: false
+---
+
+> **Placeholder case study.** The structure and approach here are real and reusable;
+> the client, the numbers and the specifics are invented and must be replaced before
+> this page goes live. See `CONTENT-TODO.md`.
+
+## The situation
+
+The company had shipped a customer support assistant six months earlier. It handled a
+large share of incoming questions, which was the point — but nobody could answer a
+simple question about it: **is it getting better or worse?**
+
+What they had instead was anecdote. Someone would forward a screenshot of a bad answer
+to the team channel. Somebody would adjust the wording. Nobody knew whether that fix
+broke three other things, because there was no way to check.
+
+The result was predictable. The team stopped changing it. An assistant that nobody dares
+to improve is a liability that gets slowly worse as the product around it moves on.
+
+## What we did first
+
+We did not touch the assistant.
+
+The first two weeks went entirely into measurement, for a specific reason: without a
+baseline, every change afterwards is a matter of opinion, and there is no way to prove
+the engagement was worth what it cost.
+
+### Building the question set
+
+We pulled six months of real conversations and worked with the support team to identify
+where the assistant had actually failed. Those became the first test cases — not invented
+examples, but the specific failures that had already cost the company something.
+
+That produced 380 questions with agreed-correct answers, grouped into five categories:
+
+<EvalScorecard
+  title="Baseline — before any changes"
+  threshold={90}
+  rows={[
+    { label: 'Finds the right information', score: 74, cases: 120 },
+    { label: 'Answers stay true to the source', score: 68, cases: 120 },
+    { label: 'Uses your systems correctly', score: 91, cases: 60 },
+    { label: "Says “I don’t know” when it should", score: 41, cases: 40 },
+    { label: 'Resists being tricked', score: 83, cases: 40 },
+  ]}
+/>
+
+The baseline was worse than anyone expected, and one number explained most of the
+complaints: **41%**. When the assistant did not know something, it made something up
+nearly six times out of ten.
+
+### Agreeing what "correct" meant
+
+This was the harder part, and the part that turned out to be most valuable. Two people
+on the support team graded the same fifty answers independently and agreed on only
+about two-thirds of them.
+
+That is not a people problem. It meant the standard was ambiguous — mostly around how
+much hedging was acceptable in a partially-correct answer. Making that explicit took a
+morning and permanently improved how the team wrote support content, well outside the
+scope of the AI work.
+
+## What the measurement revealed
+
+With a score in place, the causes became findable rather than debatable:
+
+1. **Most wrong answers were retrieval failures, not model failures.** The assistant was
+   answering faithfully — from the wrong document. The source material had been split
+   into fragments that cut across section boundaries, so a policy's exceptions routinely
+   ended up separated from the policy itself.
+
+2. **Nothing told it that not knowing was acceptable.** Its instructions asked it to be
+   helpful. It complied, enthusiastically, including when the honest answer was "I don't
+   have that."
+
+3. **The cost was mostly waste.** Each request was sending twenty retrieved passages when
+   measurement showed the answer came from the top four in the overwhelming majority of
+   cases.
+
+## The work
+
+Roughly six weeks, in order of what the measurement said mattered most:
+
+- Re-chunked the source material on semantic boundaries rather than fixed length
+- Added keyword search alongside semantic search, which fixed a whole class of failures
+  involving product codes and error strings
+- Rewrote the instructions to make "I don't have that information" an explicitly good
+  outcome, with examples
+- Cut retrieved passages from twenty to six after measuring where the answer actually
+  came from
+- Wired the whole suite into CI, so a change that lowers the score cannot merge
+
+<EvalScorecard
+  title="After — same 380 questions"
+  threshold={90}
+  rows={[
+    { label: 'Finds the right information', score: 96, cases: 120 },
+    { label: 'Answers stay true to the source', score: 94, cases: 120 },
+    { label: 'Uses your systems correctly', score: 99, cases: 60 },
+    { label: "Says “I don’t know” when it should", score: 88, cases: 40 },
+    { label: 'Resists being tricked', score: 92, cases: 40 },
+  ]}
+/>
+
+## What actually changed
+
+The number the client cared about was not the pass rate. It was that **the team started
+changing the assistant again.**
+
+Before, every modification was a gamble nobody wanted to take. After, a developer could
+adjust the wording, run the suite, and see in four minutes whether it helped. That
+shifted the assistant from something frozen and slowly decaying into something the team
+improved every week.
+
+The cost reduction was a side effect of measuring retrieval properly, not a goal. It
+paid for a meaningful part of the engagement.
+
+## What we would flag
+
+One category still sits at 88% and we did not push it higher. Getting an AI to reliably
+admit ignorance trades directly against how helpful it is on the questions it *can*
+answer, and past a point you are choosing between two kinds of unhappy customer. Where
+that line sits is a business decision, not an engineering one, so we surfaced the
+trade-off and let the client set it.
